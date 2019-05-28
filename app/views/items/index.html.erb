@@ -2,10 +2,25 @@
 
 
 <h2>Tops</h2>
+
 <% @tops.each do |t| %>
-  <%= cl_image_tag(t.photo, secure: true) %>
-  <%= t.style %>
+
+<div class="card">
+  <div class="card-photo">
+    <%= cl_image_tag(t.photo, secure: true) %>
+  </div>
+
+  <div class="card-footer">
+    <p> <%= t.style %></p>
+  </div>
+</div>
+
 <% end %>
+
+
+
+
+
 
 <h2>Bottoms</h2>
 <% @bottoms.each do |b| %>

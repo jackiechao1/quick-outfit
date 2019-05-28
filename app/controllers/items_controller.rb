@@ -20,6 +20,7 @@ class ItemsController < ApplicationController
   	end
   end
 
+
   def edit
 		@item = Item.find(params[:id])
   end
@@ -43,5 +44,5 @@ class ItemsController < ApplicationController
 
   def item_params
   	params.require(:item).permit(:category, :color, :photo, :style, :photo_cache)
-  end	
+  end
 end
