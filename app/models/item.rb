@@ -1,5 +1,5 @@
 class Item < ApplicationRecord
-  belongs_to :outfit
-  belongs_to :style
+  belongs_to :outfit, optional: true
   belongs_to :user
+  mount_uploader :photo, PhotoUploader
 end

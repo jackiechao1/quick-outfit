@@ -1,9 +1,9 @@
 class ItemsController < ApplicationController
   def index
-  	@tops = Item.where(category: 'top')
-  	@bottoms = Item.where(category: 'bottom')
-  	@shoes = Item.where(category: 'shoes')
-  	@accessories = Item.where(category: 'accessories')
+  	@tops = Item.where(category: 'top', user: current_user)
+  	@bottoms = Item.where(category: 'bottom', user: current_user)
+  	@shoes = Item.where(category: 'shoes', user: current_user)
+  	@accessories = Item.where(category: 'accessories', user: current_user)
   end
 
   def new
@@ -12,7 +12,8 @@ class ItemsController < ApplicationController
 
   def create
   	@item = Item.new(item_params)
-  	if @item.save
+    @item.user = current_user
+  	if @item.save!
   		redirect_to items_path
   	else
   		render :new
@@ -41,6 +42,6 @@ class ItemsController < ApplicationController
   private
 
   def item_params
-  	params.require(:item).permit(:category, :color, :style)
+  	params.require(:item).permit(:category, :color, :photo, :style, :photo_cache)
   end	
 end

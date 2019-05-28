@@ -1,6 +1,26 @@
-<h1>Items#index</h1>
-<p>Find me in app/views/items/index.html.erb</p>
-<%= @tops %>
-<%= @bottoms %>
-<%= @shoes %>
-<%= @accessories %>
+<h1>Wardrobe</h1>
+
+
+<h2>Tops</h2>
+<% @tops.each do |t| %>
+  <%= cl_image_tag(t.photo, secure: true) %>
+  <%= t.style %>
+<% end %>
+
+<h2>Bottoms</h2>
+<% @bottoms.each do |b| %>
+	<%= cl_image_tag(b.photo, secure: true) %>
+	<%= b.style %>
+<% end %>
+
+<h2>Shoes</h2>
+<% @shoes.each do |s| %>
+  <%= cl_image_tag(s.photo, secure: true) %>
+	<%= s.style %>
+<% end %>
+
+<h2>Accessories</h2>
+<% @accessories.each do |a| %>
+  <%= cl_image_tag(a.photo, secure: true) %>
+	<%= a.style %>
+<% end %>

@@ -4,7 +4,6 @@ class CreateItems < ActiveRecord::Migration[5.2]
       t.string :category
       t.string :color
       t.references :outfit, foreign_key: true
-      t.references :style, foreign_key: true
       t.references :user, foreign_key: true
 
       t.timestamps

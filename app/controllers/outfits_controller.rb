@@ -1,6 +1,6 @@
 class OutfitsController < ApplicationController
   def index
-  	@outfits = Outfit.all
+  	@outfits = Outfit.where(user: current_user)
   end
 
   def show
