@@ -1,4 +1,4 @@
-h1, h2, h3, p {
+h1, h2, h3, p{
   color: $typo-color;
 }
 
@@ -29,3 +29,23 @@ h1, h2, h3, p {
       margin: 0px;
     }
   }
+
+.qo-btn-secondary {
+  background-color: white;
+  border-radius: 25px;
+  border: 2px solid $blue;
+  padding: 4px 15px;
+}
+a.qo-btn-secondary {
+  color: $blue;
+}
+
+.qo-btn-input {
+  background-color: #C9D2DD;
+  border-radius: 25px;
+
+  padding: 4px 15px;
+}
+a.qo-btn-input {
+  color: white;
+}
