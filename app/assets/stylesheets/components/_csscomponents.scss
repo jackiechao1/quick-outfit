@@ -2,7 +2,13 @@ h1, h2, h3, p{
   color: $typo-color;
 }
 
+.slick-current .clothes-card {
+  opacity: 1;
+}
+
 .clothes-card {
+  opacity: 0.5;
+  transition: opacity ease 1s;
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   width: 220px;
@@ -10,7 +16,7 @@ h1, h2, h3, p{
   background: white;
   display: flex;
   flex-direction: column;
-  margin: auto;
+  margin: 10px;
 }
 
 .clothes-card-photo > img {
