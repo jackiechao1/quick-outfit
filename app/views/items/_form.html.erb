@@ -4,7 +4,7 @@
   <%= f.input :category, collection: ['top', 'bottom', 'shoes', 'accessories'] %>
   <%= f.input :color, collection: ['white', 'black', 'grey', 'red', 'brown', 'blue', 'green', 'pink', 'yellow'] %>
   <%= f.input :style, collection: ['work', 'casual', 'sportswear', 'special occasion'] %>
-  <%= f.submit %>
+  <%= f.submit class: "btn btn-lg qo-btn-input"%>
 <% end %>
 
-<%= link_to 'back', items_path %>
+<%= link_to 'back', items_path, class: "btn btn-lg qo-btn-secondary"%>
