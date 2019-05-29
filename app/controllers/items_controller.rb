@@ -5,6 +5,7 @@ class ItemsController < ApplicationController
   	@shoes = Item.where(category: 'shoes', user: current_user)
   	@accessories = Item.where(category: 'accessories', user: current_user)
     @item = Item.new
+    @outfit = Outfit.new
   end
 
   def create

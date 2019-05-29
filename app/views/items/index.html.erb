@@ -7,8 +7,6 @@
       <div class="modal-content">
         <div class="modal-header">
 
-          <button type="button" class="btn btn-lg qo-btn-secondary" data-dismiss="modal">&times;/>
-
 					<h4 class="modal-title">Add an Item</h4>
         </div>
         <div class="modal-body">
@@ -30,16 +28,19 @@
 
 <div class="slick-carousel">
   <% @tops.each do |t| %>
-  <div>
-    <div class="clothes-card">
-        <div class="clothes-card-photo">
-          <%= cl_image_tag(t.photo, secure: true) %>
-        </div>
-        <div class="clothes-card-footer">
-          <p> <%= t.style %></p>
+    <input type="checkbox" class="hidden" value="<%= t.id %>"id="post_top_ids_<%= t.id %>">
+    <label for="post_top_ids_<%= t.id %>">
+      <div>
+        <div class="clothes-card">
+          <div class="clothes-card-photo">
+            <%= cl_image_tag(t.photo, secure: true) %>
+          </div>
+          <div class="clothes-card-footer">
+            <p> <%= t.style %></p>
+          </div>
         </div>
       </div>
-  </div>
+    </label>
   <% end %>
 </div>
 
