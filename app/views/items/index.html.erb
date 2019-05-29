@@ -12,7 +12,7 @@
           <%= render 'form', item: @item %>
         </div>
       </div>
-      
+
     </div>
   </div>
 
@@ -23,37 +23,50 @@
 
 <% @tops.each do |t| %>
 
-<div class="card">
-  <div class="card-photo">
-    <%= cl_image_tag(t.photo, secure: true) %>
-  </div>
-
-  <div class="card-footer">
-    <p> <%= t.style %></p>
-  </div>
-</div>
+  <div class="clothes-card">
+      <div class="clothes-card-photo">
+        <%= cl_image_tag(t.photo, secure: true) %>
+      </div>
+      <div class="clothes-card-footer">
+        <p> <%= t.style %></p>
+      </div>
+    </div>
 
 <% end %>
-
-
-
-
 
 
 <h2>Bottoms</h2>
 <% @bottoms.each do |b| %>
-	<%= cl_image_tag(b.photo, secure: true) %>
-	<%= b.style %>
+  <div class="clothes-card">
+      <div class="clothes-card-photo">
+        <%= cl_image_tag(b.photo, secure: true) %>
+      </div>
+      <div class="clothes-card-footer">
+        <p> <%= b.style %></p>
+      </div>
+    </div>
 <% end %>
 
 <h2>Shoes</h2>
 <% @shoes.each do |s| %>
-  <%= cl_image_tag(s.photo, secure: true) %>
-	<%= s.style %>
+  <div class="clothes-card">
+      <div class="clothes-card-photo">
+        <%= cl_image_tag(s.photo, secure: true) %>
+      </div>
+      <div class="clothes-card-footer">
+        <p> <%= s.style %></p>
+      </div>
+    </div>
 <% end %>
 
 <h2>Accessories</h2>
 <% @accessories.each do |a| %>
-  <%= cl_image_tag(a.photo, secure: true) %>
-	<%= a.style %>
+  <div class="clothes-card">
+      <div class="clothes-card-photo">
+        <%= cl_image_tag(a.photo, secure: true) %>
+      </div>
+      <div class="clothes-card-footer">
+        <p> <%= a.style %></p>
+      </div>
+    </div>
 <% end %>
