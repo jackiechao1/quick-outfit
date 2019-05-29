@@ -1,21 +1,4 @@
-<%=link_to 'Back', 'LINK#', class: 'btn btn-lg qo-btn-secondary'%>
-<div class="container">
-	<button type="button" class="btn btn-primary btn-lg qo-btn-primary" data-toggle="modal" data-target="#myModal">Add</button>
-  
-	<div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
 
-					<h4 class="modal-title">Add an Item</h4>
-        </div>
-        <div class="modal-body">
-          <%= render 'form', item: @item %>
-        </div>
-      </div>
-
-    </div>
-  </div>
 
 <h1>Wardrobe</h1>
 
@@ -41,6 +24,7 @@
   <% @tops.each do |t| %>
     <input type="checkbox" name="item[ids][]" class="d-none" value="<%= t.id %>"id="post_top_ids_<%= t.id %>"></input>
   <% end %>
+
 
   <h2>Bottoms</h2>
   <div class="slick-carousel">
