@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
 <%=link_to 'Back', 'LINK#', class: 'btn btn-lg qo-btn-secondary'%>
 <div class="container">
@@ -7,16 +8,9 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
+=======
+>>>>>>> 5d63ebe43db5f51cebf128b1f87f752d78c28176
 
-					<h4 class="modal-title">Add an Item</h4>
-        </div>
-        <div class="modal-body">
-          <%= render 'form', item: @item %>
-        </div>
-      </div>
-
-    </div>
-  </div>
 
 <h1>Wardrobe</h1>
 
@@ -42,6 +36,7 @@
   <% @tops.each do |t| %>
     <input type="checkbox" name="item[ids][]" class="d-none" value="<%= t.id %>"id="post_top_ids_<%= t.id %>"></input>
   <% end %>
+
 
   <h2>Bottoms</h2>
   <div class="slick-carousel">
