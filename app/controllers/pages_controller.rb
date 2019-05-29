@@ -5,8 +5,5 @@ class PagesController < ApplicationController
   end
 
   def csscomponents
-
   end
-
 end
-
