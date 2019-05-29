@@ -32,7 +32,7 @@
     </div>
   </div>
 
-<% else params[:action] == "items" %>
+<% elsif params[:action] == "items" %>
 
   <div class="d-flex navbar navbar-expand-sm navbar-light navbar-items">
 
@@ -63,6 +63,8 @@
         </div>
       </div>
     </div>
+
+<% elsif params[:action] == "csscomponents" %>
 
 <% end %>
 
