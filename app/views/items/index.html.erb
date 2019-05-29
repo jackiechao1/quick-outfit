@@ -16,57 +16,73 @@
     </div>
   </div>
 
+<%= link_to 'back', '#', class="btn btn-lg qo-btn-secondary"%>
+
 <h1>Wardrobe</h1>
 
 
 <h2>Tops</h2>
 
-<% @tops.each do |t| %>
-
-  <div class="clothes-card">
-      <div class="clothes-card-photo">
-        <%= cl_image_tag(t.photo, secure: true) %>
+<div class="slick-carousel">
+  <% @tops.each do |t| %>
+  <div>
+    <div class="clothes-card">
+        <div class="clothes-card-photo">
+          <%= cl_image_tag(t.photo, secure: true) %>
+        </div>
+        <div class="clothes-card-footer">
+          <p> <%= t.style %></p>
+        </div>
       </div>
-      <div class="clothes-card-footer">
-        <p> <%= t.style %></p>
-      </div>
-    </div>
-
-<% end %>
+  </div>
+  <% end %>
+</div>
 
 
 <h2>Bottoms</h2>
-<% @bottoms.each do |b| %>
-  <div class="clothes-card">
-      <div class="clothes-card-photo">
-        <%= cl_image_tag(b.photo, secure: true) %>
+<div class="slick-carousel">
+  <% @bottoms.each do |b| %>
+    <div>
+    <div class="clothes-card">
+        <div class="clothes-card-photo">
+          <%= cl_image_tag(b.photo, secure: true) %>
+        </div>
+        <div class="clothes-card-footer">
+          <p> <%= b.style %></p>
+        </div>
       </div>
-      <div class="clothes-card-footer">
-        <p> <%= b.style %></p>
-      </div>
-    </div>
-<% end %>
+    <div>
+  <% end %>
+</div>
 
 <h2>Shoes</h2>
-<% @shoes.each do |s| %>
-  <div class="clothes-card">
-      <div class="clothes-card-photo">
-        <%= cl_image_tag(s.photo, secure: true) %>
-      </div>
-      <div class="clothes-card-footer">
-        <p> <%= s.style %></p>
+<div class="slick-carousel">
+  <% @shoes.each do |s| %>
+    <div>
+      <div class="clothes-card">
+        <div class="clothes-card-photo">
+          <%= cl_image_tag(s.photo, secure: true) %>
+        </div>
+        <div class="clothes-card-footer">
+          <p> <%= s.style %></p>
+        </div>
       </div>
     </div>
-<% end %>
+  <% end %>
+</div>
 
 <h2>Accessories</h2>
-<% @accessories.each do |a| %>
-  <div class="clothes-card">
-      <div class="clothes-card-photo">
-        <%= cl_image_tag(a.photo, secure: true) %>
-      </div>
-      <div class="clothes-card-footer">
-        <p> <%= a.style %></p>
+<div class="slick-carousel">
+  <% @accessories.each do |a| %>
+    <div>
+      <div class="clothes-card">
+        <div class="clothes-card-photo">
+            <%= cl_image_tag(a.photo, secure: true) %>
+          </div>
+          <div class="clothes-card-footer">
+            <p> <%= a.style %></p>
+        </div>
       </div>
     </div>
-<% end %>
+  <% end %>
+</div>
