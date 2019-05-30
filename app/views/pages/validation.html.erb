@@ -1,6 +1,27 @@
-<% @outfits.each do |outfit| %>
-	<p><%= outfit.name %></p> 
-	<p><%= outfit.status %></p> 
-	<%= link_to 'Validate', outfit_validate_path(outfit), method: :patch, data: { confirm: 'Are you sure?' } %>
-<% end %>
 
+<h1>Outfit to validate</h1>
+<h1>Outfit to validate</h1>
+
+<% @outfits.each do |outfit| %>
+  <h2> <%= outfit.name %></h2>
+    <%= link_to 'Validate', outfit_validate_path(outfit), class: 'btn btn-primary btn-lg qo-btn-primary', method: :patch, data: { confirm: 'Are you sure?' } %>
+    <div class="slick-carousel">
+      <% outfit.items.each do |t| %>
+        <div>
+          <div class="clothes-card-saved">
+            <div class="clothes-card-photo-saved">
+              <%= cl_image_tag(t.photo, secure: true) %>
+            </div>
+            <div class="clothes-card-footer-saved">
+              <% if outfit.status == 'pending' %>
+                <p> <%= t.style %>, <%= outfit.status %></p>
+              <% else %>
+                <p> <%= t.style %></p>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+
+<% end %>
