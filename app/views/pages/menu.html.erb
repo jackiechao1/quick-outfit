@@ -4,3 +4,6 @@
 <%=link_to 'Wardrobe', '/items', class: 'btn btn-primary btn-lg qo-btn-primary'%>
 
 <%=link_to 'Saved Outfits', '/outfits', class: 'btn btn-primary btn-lg qo-btn-primary'%>
+<% if current_user.admin %>
+	<%=link_to 'Validation', '/validation', class: 'btn btn-primary btn-lg qo-btn-primary'%>
+<% end %>
