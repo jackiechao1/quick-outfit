@@ -12,6 +12,7 @@
               </div>
               <div class="clothes-card-footer">
                 <p> <%= t.style %></p>
+                <%= link_to 'delete', item_path(t), method: :delete, class: 'd-none delete-button' %>
               </div>
             </div>
           </div>
@@ -19,7 +20,7 @@
       <% end %>
   </div>
   <% @tops.each do |t| %>
-    <input type="checkbox" name="item[ids][]" class="d-none" value="<%= t.id %>"id="post_top_ids_<%= t.id %>"></input>
+    <input type="checkbox" name="item[ids][]" class="d-none clothes-card-checkbox" value="<%= t.id %>"id="post_top_ids_<%= t.id %>"></input>
   <% end %>
 
 
@@ -34,6 +35,7 @@
             </div>
             <div class="clothes-card-footer">
               <p> <%= b.style %></p>
+              <%= link_to 'delete', item_path(b), method: :delete, class: 'd-none delete-button' %>
             </div>
           </div>
         </div>
@@ -41,7 +43,7 @@
     <% end %>
   </div>
   <% @bottoms.each do |bottom| %>
-    <input type="checkbox" name="item[ids][]" class="d-none" value="<%= bottom.id %>"id="post_bottom_ids_<%= bottom.id %>"></input>
+    <input type="checkbox" name="item[ids][]" class="d-none clothes-card-checkbox" value="<%= bottom.id %>"id="post_bottom_ids_<%= bottom.id %>"></input>
   <% end %>
 
   <h2>Shoes</h2>
@@ -55,13 +57,14 @@
             </div>
             <div class="clothes-card-footer">
               <p> <%= s.style %></p>
+              <%= link_to 'delete', item_path(s), method: :delete, class: 'd-none delete-button' %>
             </div>
           </div>
         </div>
       </label>
     <% end %>
     <% @shoes.each do |shoe| %>
-      <input type="checkbox" name="item[ids][]" class="d-none" value="<%= shoe.id %>"id="post_shoes_ids_<%= shoe.id %>"></input>
+      <input type="checkbox" name="item[ids][]" class="d-none clothes-card-checkbox" value="<%= shoe.id %>"id="post_shoes_ids_<%= shoe.id %>"></input>
     <% end %>
   </div>
 
@@ -76,13 +79,14 @@
               </div>
               <div class="clothes-card-footer">
                 <p> <%= a.style %></p>
+                <%= link_to 'delete', item_path(a), method: :delete, class: 'd-none delete-button' %>
             </div>
           </div>
         </div>
       </label>
     <% end %>
     <% @accessories.each do |a| %>
-      <input type="checkbox" name="item[ids][]" class="d-none" value="<%= a.id %>"id="post_accessories_ids_<%= a.id %>"></input>
+      <input type="checkbox" name="item[ids][]" class="d-none clothes-card-checkbox" value="<%= a.id %>"id="post_accessories_ids_<%= a.id %>"></input>
     <% end %>
   </div>
 
@@ -108,3 +112,4 @@
     </div>
 
 <% end %>
+<%= javascript_pack_tag("items_index")  %>
