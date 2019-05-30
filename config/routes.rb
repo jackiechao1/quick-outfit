@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
-  resources :outfits
+  resources :outfits do
+  	patch :validate, to: 'outfits#validate'
+  end
   resources :items
 
   get "/csscomponents", to: 'pages#csscomponents'
   get "/menu", to: 'pages#menu'
+  get "/validation", to: 'pages#validation'
 
   devise_for :users
   root to: 'pages#home'

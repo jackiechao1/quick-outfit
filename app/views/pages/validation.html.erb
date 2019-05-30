@@ -1,0 +1,6 @@
+<% @outfits.each do |outfit| %>
+	<p><%= outfit.name %></p> 
+	<p><%= outfit.status %></p> 
+	<%= link_to 'Validate', outfit_validate_path(outfit), method: :patch, data: { confirm: 'Are you sure?' } %>
+<% end %>
+
