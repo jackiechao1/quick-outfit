@@ -2,13 +2,14 @@
   <%= f.input :photo %>
   <%= f.input :photo_cache, as: :hidden %>
 
-  <input type="file" name="image" accept="image/*" capture>
+  <input type="file" name="image" accept="image/*" capture <i class="fas fa-camera"></i>>
 
   <%= f.input :category, collection: ['top', 'bottom', 'shoes', 'accessories'] %>
   <%= f.input :color, collection: ['white', 'black', 'grey', 'red', 'brown', 'blue', 'green', 'pink', 'yellow'] %>
   <%= f.input :style, collection: ['work', 'casual', 'sportswear', 'special occasion'] %>
-  <%= f.submit %>
+  <%= f.submit class: "btn btn-lg qo-btn-primary" %>
 <% end %>
 
 
 <button button class="btn btn-lg qo-btn-secondary" data-dismiss="modal" aria-label="Close">Back</button>
+
