@@ -10,7 +10,11 @@
               <%= cl_image_tag(t.photo, secure: true) %>
             </div>
             <div class="clothes-card-footer-saved">
-              <p> <%= t.style %>, <%= outfit.status %></p>
+              <% if outfit.status == 'pending' %>
+                <p> <%= t.style %>, <%= outfit.status %></p>
+              <% else %>
+                <p> <%= t.style %></p>
+              <% end %>
             </div>
           </div>
         </div>
