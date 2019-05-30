@@ -1,12 +1,8 @@
-
 const deleteButtons = document.querySelectorAll(".delete-button")
 const clothesCards = document.querySelectorAll(".clothes-card");
-console.log(clothesCards);
-const firstCard = clothesCards[0];
 
 let touching = false;
 document.addEventListener("click", (event) => {
-	console.log(event.path)
 	const clickedOnACard = event.path.some((element) => {
 		return element.classList !== undefined && (
 			element.classList.contains("clothes-card-checkbox") ||
