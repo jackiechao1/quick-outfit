@@ -1,9 +1,13 @@
-<h1>hello</h1>
+<div id="qo-main-menu">
+<%= image_tag "hanger2.png", class:'outfit-image'%>
 
 
-<%=link_to 'Wardrobe', '/items', class: 'btn btn-primary btn-lg qo-btn-primary'%>
+<%=link_to 'Wardrobe', '/items', class: 'btn btn-primary btn-lg btn-block qo-btn-primary shrink'%>
 
-<%=link_to 'Saved Outfits', '/outfits', class: 'btn btn-primary btn-lg qo-btn-primary'%>
+<%=link_to 'Saved Outfits', '/outfits', class: 'btn btn-primary btn-lg btn-block qo-btn-primary shrink'%>
+
+</div>
+
 <% if current_user.admin %>
 	<%=link_to 'Validation', '/validation', class: 'btn btn-primary btn-lg qo-btn-primary'%>
 <% end %>

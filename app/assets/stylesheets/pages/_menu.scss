@@ -1,0 +1,48 @@
+.outfit-image{
+   width: 100%;
+}
+
+.shrink{
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+#qo-main-menu{
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  // height: calc(100vh - 56px);
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+
+
+#qo-main-home{
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  // height: calc(100vh - 56px);
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  i {
+    font-size: 150px;
+  }
+}
+
+.logo-menu {
+  i {
+    font-size: 40px;
+    color: $blue;
+    padding: 4px 15px;
+    opacity: 1;
+
+      &:hover {
+        opacity: 0.5;
+  }
+  }
+
+}
+
