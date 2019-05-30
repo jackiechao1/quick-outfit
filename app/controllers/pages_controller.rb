@@ -6,4 +6,7 @@ class PagesController < ApplicationController
 
   def csscomponents
   end
+
+  def menu
+  end
 end
