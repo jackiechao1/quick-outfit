@@ -1,7 +1,7 @@
 <h1>Saved Outfits</h1>
 
 <% @outfits.each do |outfit| %>
-  <h2> Outfit <%= outfit.id %></h2>
+  <h2> <%= outfit.name %></h2>
   <div class="slick-carousel">
     <% outfit.items.each do |t| %>
       <div>
@@ -10,7 +10,7 @@
             <%= cl_image_tag(t.photo, secure: true) %>
           </div>
           <div class="clothes-card-footer">
-            <p> <%= t.style %></p>
+            <p> <%= t.style %>, <%= outfit.status %></p>
           </div>
         </div>
       </div>
