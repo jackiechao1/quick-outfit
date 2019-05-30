@@ -8,7 +8,7 @@ class OutfitsController < ApplicationController
   end
 
   def create
-    @outfit = Outfit.new
+    @outfit = Outfit.new(name:  params[:outfit_name])
     @outfit.user = current_user
 
     # Add all items to outfit
