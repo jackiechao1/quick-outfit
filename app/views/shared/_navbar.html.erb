@@ -73,7 +73,9 @@
   <div class="d-flex navbar navbar-expand-sm navbar-light navbar-items">
 
 
-    <%=link_to 'Back', '/menu', class: 'btn btn-lg qo-btn-secondary'%>
+    <%=link_to '/menu', class: 'logo' do %>
+    <i class="fas fa-chevron-circle-left"></i>
+<% end %>
 
 
     <!-- Button trigger modal -->
@@ -108,8 +110,9 @@
 
   <div class="d-flex navbar navbar-expand-sm navbar-light navbar-items">
 
-    <%=link_to 'Back', outfits_path , class: 'btn btn-lg qo-btn-secondary'%>
-
+    <%= link_to outfits_path, class: 'logo' do %>
+       <i class="fas fa-chevron-circle-left"></i>
+    <% end %>
   </div>
 
 <% elsif params[:controller] == "outfits" %>
@@ -117,8 +120,9 @@
   <div class="d-flex navbar navbar-expand-sm navbar-light navbar-items">
 
 
-    <%=link_to 'Back', '/menu', class: 'btn btn-lg qo-btn-secondary'%>
-
+    <%=link_to '/menu', class: 'logo-menu' do %>
+    <i class="fas fa-chevron-circle-left"></i>
+<% end %>
 
   </div>
 
