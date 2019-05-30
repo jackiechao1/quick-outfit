@@ -7,6 +7,13 @@ class OutfitsController < ApplicationController
     @outfit = Outfit.find(params[:id])
   end
 
+  def validate
+    @outfit = Outfit.find(params[:outfit_id])
+    @outfit.status = 'validated'
+    @outfit.save
+    redirect_to validation_path
+  end
+
   def create
     @outfit = Outfit.new(name:  params[:outfit_name])
     @outfit.user = current_user

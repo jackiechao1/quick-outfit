@@ -8,4 +8,6 @@
 
 </div>
 
-
+<% if current_user.admin %>
+	<%=link_to 'Validation', '/validation', class: 'btn btn-primary btn-lg qo-btn-primary'%>
+<% end %>

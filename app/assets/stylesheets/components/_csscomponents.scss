@@ -32,8 +32,8 @@ h1, h2, h3, p{
 .clothes-card-footer{
   text-align: left;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  // flex-direction: column;
+  justify-content: space-between;
 
     p {
       margin-top: 5px;
@@ -79,5 +79,66 @@ a.qo-btn-secondary {
         opacity: 0.5;
   }
   }
-
 }
+
+
+
+
+
+.clothes-card-saved {
+  opacity: 0.9;
+  transition: opacity ease 1s;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  width: 220px;
+  height: 220px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  &.active {
+    border: 2px solid blue;
+  }
+}
+
+.clothes-card-photo-saved > img {
+  border-radius: 5px 5px 0px 0px;
+  height: 190px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.clothes-card-footer-saved{
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+    p {
+      margin-top: 5px;
+      padding-left: 5px;
+    }
+  }
+
+.shake {
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
