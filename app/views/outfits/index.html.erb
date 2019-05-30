@@ -1,19 +1,23 @@
 <h1>Saved Outfits</h1>
 
 <% @outfits.each do |outfit| %>
-  <h2> <%= outfit.name %></h2>
-  <div class="slick-carousel">
-    <% outfit.items.each do |t| %>
-      <div>
-        <div class="clothes-card">
-          <div class="clothes-card-photo">
-            <%= cl_image_tag(t.photo, secure: true) %>
-          </div>
-          <div class="clothes-card-footer">
-            <p> <%= t.style %>, <%= outfit.status %></p>
+  <h2> <%= link_to outfit.name, outfit_path(outfit) %></h2>
+    <div class="slick-carousel">
+      <% outfit.items.each do |t| %>
+        <div>
+          <div class="clothes-card-saved">
+            <div class="clothes-card-photo-saved">
+              <%= cl_image_tag(t.photo, secure: true) %>
+            </div>
+            <div class="clothes-card-footer-saved">
+              <p> <%= t.style %>, <%= outfit.status %></p>
+            </div>
           </div>
         </div>
-      </div>
-    <% end %>
-  </div>
+      <% end %>
+    </div>
+
 <% end %>
+
+
+
