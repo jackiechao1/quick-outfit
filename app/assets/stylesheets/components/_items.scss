@@ -4,3 +4,23 @@
   width:100%;
   padding: 10px;
 }
+
+
+.slick-carousel-vertical {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.clothes-card-outfits {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  margin: 10px;
+  min-height: 200px;
+  align-items: center;
+}
