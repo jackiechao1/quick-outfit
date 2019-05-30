@@ -9,4 +9,8 @@ class PagesController < ApplicationController
 
   def menu
   end
+
+  def validation
+  	@outfits = Outfit.where(status: 'pending')
+  end
 end
