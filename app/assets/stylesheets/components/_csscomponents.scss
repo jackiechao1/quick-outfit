@@ -17,6 +17,9 @@ h1, h2, h3, p{
   display: flex;
   flex-direction: column;
   margin: 10px;
+  &.active {
+    border: 2px solid blue;
+  }
 }
 
 .clothes-card-photo > img {
