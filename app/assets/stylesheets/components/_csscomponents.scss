@@ -62,20 +62,26 @@ a.qo-btn-input {
 .qo-btn-secondary {
   background-color: #C9D2DD;
   border-radius: 25px;
-
   padding: 4px 15px;
 }
 a.qo-btn-secondary {
   color: white;
 }
 
-.logo{
+.logo {
   i {
     font-size: 40px;
     color: $blue;
-  }
-}
+    padding: 4px 15px;
+    opacity: 1;
 
+      &:hover {
+        opacity: 0.5;
+  }
+  }
+
+
+}
 
 
 
