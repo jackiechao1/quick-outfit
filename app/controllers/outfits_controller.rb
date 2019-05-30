@@ -8,7 +8,7 @@ class OutfitsController < ApplicationController
   end
 
   def create
-    @outfit = Outfit.new
+    @outfit = Outfit.new(name:  params[:outfit_name])
     @outfit.user = current_user
 
     # Add all items to outfit
@@ -16,9 +16,7 @@ class OutfitsController < ApplicationController
       @outfit.items << Item.find(id.to_i)
     end
     if @outfit.save
-      redirect_to items_path, notice: "outfit saved"
-    else
-      redirect_to items_path, alert: "messed up"
+      redirect_to items_path, flash: {outfit_created: @outfit}
     end
   end
 end

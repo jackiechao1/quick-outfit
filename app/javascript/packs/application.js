@@ -11,3 +11,12 @@ $('.slick-carousel').slick({
 
   // slidesToScroll: 3
 });
+
+$(document).ready(function(){
+  $(".clothes-card").click(function(){
+    $(this).toggleClass("active");
+  });
+
+  $('#created-outfit').modal('show')
+});
+
