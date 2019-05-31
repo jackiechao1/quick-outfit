@@ -1,8 +1,6 @@
 <%= simple_form_for(@item) do |f| %>
 
-  <div class="fas fa-camera">
-    <%= f.input :photo %>
-  </div>
+  <%= f.input :photo %>
   <%= f.input :photo_cache, as: :hidden %>
   <%= f.input :category, collection: ['top', 'bottom', 'shoes', 'accessories'] %>
   <%= f.input :color, collection: ['white', 'black', 'grey', 'red', 'brown', 'blue', 'green', 'pink', 'yellow'] %>

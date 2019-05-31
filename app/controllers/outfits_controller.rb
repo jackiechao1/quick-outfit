@@ -26,4 +26,10 @@ class OutfitsController < ApplicationController
       redirect_to items_path, flash: {outfit_created: @outfit}
     end
   end
+
+  def destroy
+    outfit = Outfit.find(params[:id])
+    outfit.destroy
+    redirect_to outfits_path
+  end
 end

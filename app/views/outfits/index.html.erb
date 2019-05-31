@@ -2,6 +2,7 @@
 
 <% @outfits.each do |outfit| %>
   <h2> <%= link_to outfit.name, outfit_path(outfit) %></h2>
+  <%= link_to 'delete', outfit_path(outfit), method: :delete, class: 'btn btn-primary btn-lg qo-btn-primary' %>
     <div class="slick-carousel">
       <% outfit.items.each do |t| %>
         <div>
