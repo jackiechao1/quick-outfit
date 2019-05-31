@@ -1,8 +1,11 @@
+
 <h1>Saved Outfits</h1>
 
 <% @outfits.each do |outfit| %>
-  <h2> <%= link_to outfit.name, outfit_path(outfit) %></h2>
-  <%= link_to 'delete', outfit_path(outfit), method: :delete, class: 'btn btn-primary btn-lg qo-btn-primary' %>
+  <div class= "outfit-saved">
+    <h3 class="d-inline"> <%= link_to truncate(outfit.name, { length: 10 }), outfit_path(outfit) %></h3>
+    <%= link_to 'delete', outfit_path(outfit), method: :delete, class: 'btn btn-primary btn-lg qo-btn-primary-small' %>
+  </div>
     <div class="slick-carousel">
       <% outfit.items.each do |t| %>
         <div>
