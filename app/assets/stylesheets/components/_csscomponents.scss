@@ -1,5 +1,8 @@
 h1, h2, h3, p{
   color: $typo-color;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .slick-current .clothes-card {
@@ -128,7 +131,7 @@ a.qo-btn-secondary {
   10%, 90% {
     transform: translate3d(-1px, 0, 0);
   }
-  
+
   20%, 80% {
     transform: translate3d(2px, 0, 0);
   }

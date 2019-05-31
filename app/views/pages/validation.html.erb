@@ -3,6 +3,7 @@
 <h1>Outfit to validate</h1>
 
 <% @outfits.each do |outfit| %>
+  <%= link_to 'delete', outfit_path(outfit), method: :delete, class: 'btn btn-primary btn-lg qo-btn-primary' %>
   <h2> <%= outfit.name %></h2>
     <%= link_to 'Validate', outfit_validate_path(outfit), class: 'btn btn-primary btn-lg qo-btn-primary', method: :patch, data: { confirm: 'Are you sure?' } %>
     <div class="slick-carousel">
