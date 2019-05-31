@@ -84,6 +84,22 @@ a.qo-btn-secondary {
   }
 }
 
+.logo.delete {
+  i {
+    font-size: 40px;
+    color: $blue;
+    padding: 4px 15px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    opacity: 1;
+
+      &:hover {
+        opacity: 0.5;
+  }
+  }
+}
 
 
 
