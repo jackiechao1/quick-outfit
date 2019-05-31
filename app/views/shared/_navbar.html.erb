@@ -124,7 +124,9 @@
 <% elsif params[:action] == "validation" %>
 
   <div class="d-flex navbar navbar-expand-sm navbar-light navbar-items">
-    <%=link_to 'Back', '/menu', class: 'btn btn-lg qo-btn-secondary'%>
+    <%=link_to '/menu', class: 'btn btn-lg qo-btn-secondary' do %>
+    <i class="fas fa-chevron-circle-left"></i>
+    <%end%>
   </div>
 
 

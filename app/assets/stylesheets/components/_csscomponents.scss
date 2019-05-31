@@ -47,7 +47,13 @@ h1, h2, h3, p{
 
 .qo-btn-primary{
   border-radius: 25px;
-  padding: 4px 15px
+  padding: 4px 15px;
+}
+
+.qo-btn-primary-small{
+  border-radius: 15px;
+  padding: 4px 15px;
+  font-size: 0.8rem;
 }
 
 .qo-btn-input {
