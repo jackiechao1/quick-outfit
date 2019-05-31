@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_30_174017) do
+ActiveRecord::Schema.define(version: 2019_05_31_145050) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,14 +18,21 @@ ActiveRecord::Schema.define(version: 2019_05_30_174017) do
   create_table "items", force: :cascade do |t|
     t.string "category"
     t.string "color"
-    t.bigint "outfit_id"
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "photo"
     t.string "style"
-    t.index ["outfit_id"], name: "index_items_on_outfit_id"
     t.index ["user_id"], name: "index_items_on_user_id"
+  end
+
+  create_table "outfit_items", force: :cascade do |t|
+    t.bigint "outfit_id"
+    t.bigint "item_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["item_id"], name: "index_outfit_items_on_item_id"
+    t.index ["outfit_id"], name: "index_outfit_items_on_outfit_id"
   end
 
   create_table "outfits", force: :cascade do |t|
@@ -50,7 +57,8 @@ ActiveRecord::Schema.define(version: 2019_05_30_174017) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "items", "outfits"
   add_foreign_key "items", "users"
+  add_foreign_key "outfit_items", "items"
+  add_foreign_key "outfit_items", "outfits"
   add_foreign_key "outfits", "users"
 end
