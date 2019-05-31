@@ -25,6 +25,7 @@ h1, h2, h3, p{
   }
 }
 
+
 .clothes-card-photo > img {
   border-radius: 5px 5px 0px 0px;
   height: 190px;
@@ -151,19 +152,29 @@ a.qo-btn-secondary {
 
 @keyframes shake {
   10%, 90% {
-    transform: translate3d(-1px, 0, 0);
+    transform: translate3d(-1px, -1px, -1px);
   }
 
   20%, 80% {
-    transform: translate3d(2px, 0, 0);
+    transform: translate3d(2px, 2px, 2px);
   }
 
   30%, 50%, 70% {
-    transform: translate3d(-4px, 0, 0);
+    transform: translate3d(-4px, -4px, -4px);
   }
 
   40%, 60% {
-    transform: translate3d(4px, 0, 0);
+    transform: translate3d(4px, 4px, 4px);
   }
+}
+
+.qo-selected-outfit{
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  // height: calc(100vh - 56px);
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
 }
 
