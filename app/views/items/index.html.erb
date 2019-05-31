@@ -20,10 +20,11 @@
           </div>
         </label>
       <% end %>
-  </div>
+
   <% @tops.each do |t| %>
     <input type="checkbox" name="item[ids][]" class="d-none clothes-card-checkbox" value="<%= t.id %>"id="post_top_ids_<%= t.id %>"></input>
   <% end %>
+  </div>
 
 
   <h2>Bottoms</h2>
