@@ -12,6 +12,7 @@
               </div>
               <div class="clothes-card-footer">
                 <p> <%= t.style %></p>
+                <p> x <%= t.counter %></p>
                 <%= link_to item_path(t), method: :delete, class: 'd-none delete-button' do %>
                   <i class="fas fa-times-circle"></i>
                 <% end  %>
