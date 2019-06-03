@@ -17,7 +17,7 @@ class OutfitsController < ApplicationController
   end
 
   def create
-    @outfit = Outfit.new(name:  params[:outfit_name])
+    @outfit = Outfit.new(name: params[:outfit_name])
     @outfit.user = current_user
 
     # Add all items to outfit
@@ -26,15 +26,13 @@ class OutfitsController < ApplicationController
       @outfit_item.item = Item.find(id.to_i)
       @outfit.outfit_items << @outfit_item
     end
-    
-    if @outfit.save
-      redirect_to items_path, flash: {outfit_created: @outfit}
-    end
+
+    redirect_to items_path, flash: { outfit_created: @outfit } if @outfit.save
   end
 
   def destroy
     outfit = Outfit.find(params[:id])
     outfit.destroy
-    redirect_back(fallback_location: root_path) 
+    redirect_back(fallback_location: root_path)
   end
 end

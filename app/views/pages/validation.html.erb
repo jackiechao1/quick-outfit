@@ -1,5 +1,6 @@
-
-<h1>Outfit to validate</h1>
+<br>
+<br>
+<br>
 <h1>Outfit to validate</h1>
 
 <% @outfits.each do |outfit| %>
@@ -15,15 +16,10 @@
               <%= cl_image_tag(t.photo, secure: true) %>
             </div>
             <div class="clothes-card-footer-saved">
-              <% if outfit.status == 'pending' %>
-                <p> <%= t.style %>, <%= outfit.status %></p>
-              <% else %>
-                <p> <%= t.style %></p>
-              <% end %>
+              <p> <%= t.style %></p>
             </div>
           </div>
         </div>
       <% end %>
     </div>
-
 <% end %>
