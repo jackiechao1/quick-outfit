@@ -1,34 +1,30 @@
+<br>
+<br>
 
 <h1>Saved Outfits</h1>
 
+<h2>Passed Outfits</h2>
 <% @outfits.each do |outfit| %>
-  <div class= "outfit-saved">
-    <h3 class="d-inline"> <%= link_to truncate(outfit.name, { length: 10 }), outfit_path(outfit) %></h3>
-    <%= link_to 'delete', outfit_path(outfit), method: :delete, class: 'btn btn-secondary btn-lg qo-btn-primary-small' %>
-  </div>
-  <%= link_to 'select outfit of the day', outfit_counter_path(outfit), method: :patch, class: 'btn btn-primary btn-lg qo-btn-primary' %>
-
-
-    <div class="slick-carousel">
-      <% outfit.items.each do |t| %>
-        <div>
-          <div class="clothes-card-saved">
-            <div class="clothes-card-photo-saved">
-              <%= cl_image_tag(t.photo, secure: true) %>
-            </div>
-            <div class="clothes-card-footer-saved">
-              <% if outfit.status == 'pending' %>
-                <p> <%= t.style %>, <%= outfit.status %></p>
-              <% else %>
-                <p> <%= t.style %></p>
-              <% end %>
-            </div>
-          </div>
-        </div>
-      <% end %>
-    </div>
-
+  <% if outfit.status == 'validated' && outfit.rating >= 6 %>
+    <%= render 'outfits/outfit_carousel', outfit: outfit %>
+  <% end %>
 <% end %>
+
+<h2>Failed Outfits</h2>
+<% @outfits.each do |outfit| %>
+  <% if outfit.status == 'validated' && outfit.rating < 6 %>
+    <%= render 'outfits/outfit_carousel', outfit: outfit %>
+  <% end %>
+<% end %>
+
+
+<h2>Pending</h2>
+<% @outfits.each do |outfit| %>
+  <% if outfit.status == 'pending' %>
+    <%= render 'outfits/outfit_carousel', outfit: outfit %>
+  <% end %>
+<% end %>
+
 
 
 

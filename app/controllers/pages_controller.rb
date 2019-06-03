@@ -11,6 +11,6 @@ class PagesController < ApplicationController
   end
 
   def validation
-  	@outfits = Outfit.where(status: 'pending')
+    @outfits = Outfit.where(status: 'pending')
   end
 end
