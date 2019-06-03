@@ -16,6 +16,14 @@ class OutfitsController < ApplicationController
     redirect_back(fallback_location: root_path)
   end
 
+  def counter
+    outfit = Outfit.find(params[:outfit_id])
+    outfit.items.each do |item|
+      item.counter += 1
+      item.save
+    end
+  end
+
   def create
     @outfit = Outfit.new(name: params[:outfit_name])
     @outfit.user = current_user
@@ -27,7 +35,9 @@ class OutfitsController < ApplicationController
       @outfit.outfit_items << @outfit_item
     end
 
+
     redirect_to items_path, flash: { outfit_created: @outfit } if @outfit.save
+
   end
 
   def destroy
