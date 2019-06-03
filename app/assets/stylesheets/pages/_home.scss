@@ -18,3 +18,9 @@ h1{
   height: 50vh;
   width: 100%;
 }
+
+@media(min-width: 600px) {
+  .landing-image {
+    display: none;
+  }
+}

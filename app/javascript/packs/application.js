@@ -5,10 +5,18 @@ import "slick-carousel/slick/slick.css"
 
 $('.slick-carousel').slick({
   infinite: true,
+<<<<<<< HEAD
+  slidesToShow: 3,
+=======
+>>>>>>> b382ef1f6a58ba7b8071ae177ea0f88d140edbd4
   centerMode: true,
   slidesToShow: 1,
   slidesToScroll: 1,
   arrows: false,
+<<<<<<< HEAD
+    variableWidth: true,
+=======
+>>>>>>> b382ef1f6a58ba7b8071ae177ea0f88d140edbd4
   responsive: [
     {
       breakpoint: 1024,
@@ -16,6 +24,26 @@ $('.slick-carousel').slick({
         slidesToShow: 3,
         slidesToScroll: 3,
         infinite: true,
+<<<<<<< HEAD
+        dots: true
+      }
+    },
+    {
+      breakpoint: 800,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
+=======
         centerMode: true,
         arrows: false,
 
@@ -46,6 +74,7 @@ $('.slick-carousel').slick({
     // instead of a settings object
   ]
 
+>>>>>>> b382ef1f6a58ba7b8071ae177ea0f88d140edbd4
 });
 
 // $('.slick-carousel').slick({

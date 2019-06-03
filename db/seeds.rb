@@ -4,6 +4,9 @@
 # Examples:
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
+<<<<<<< HEAD
+#   Character.
+=======
 #   Character.create(name: 'Luke', movie: movies.first)
 Item.destroy_all
 User.destroy_all
@@ -34,3 +37,4 @@ callbacks.each do |callback|
 	item.seed_image = callback["secure_url"]
 	item.save!
 end
+>>>>>>> b382ef1f6a58ba7b8071ae177ea0f88d140edbd4
