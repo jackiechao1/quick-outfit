@@ -1,36 +1,33 @@
 <h1>Wardrobe</h1>
 <%= form_tag outfits_path, method: :post do %>
   <h2>Tops</h2>
-    <%= render 'items/carousel', items: @tops %>
+  <%= render 'items/carousel', items: @tops %>
 
   <h2>Bottoms</h2>
-    <%= render 'items/carousel', items: @bottoms %>
+  <%= render 'items/carousel', items: @bottoms %>
 
   <h2>Shoes</h2>
-    <%= render 'items/carousel', items: @shoes %>
-
-
+  <%= render 'items/carousel', items: @shoes %>
 
   <div class= "items-save-button">
     <div class='btn btn-primary btn-lg qo-btn-primary' data-target="#add-outfit" data-toggle='modal'>save</div>
   </div>
-  <div class="modal fade" id="add-outfit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h3 class="modal-title" id="exampleModalLabel">What's the name of the outfit</h3>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <%= text_field_tag :outfit_name, nil, class:"border"  %>
-            <%= button_tag :save, class: 'btn btn-primary btn-lg qo-btn-primary' %>
-          </div>
-
+  <div class="modal fade" id="add-outfit" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title">What's the name of the outfit</h3>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <%= text_field_tag :outfit_name, nil, class: "border"  %>
+          <%= button_tag :save, class: 'btn btn-primary btn-lg qo-btn-primary' %>
         </div>
       </div>
     </div>
-
+  </div>
 <% end %>
+
 <%= javascript_pack_tag("items_index")  %>
