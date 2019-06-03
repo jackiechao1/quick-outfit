@@ -6,6 +6,7 @@
 <h2>Passed Outfits</h2>
 <% @outfits.each do |outfit| %>
   <% if outfit.status == 'validated' && outfit.rating >= 6 %>
+  	<%= link_to 'select outfit of the day', outfit_counter_path(outfit), method: :patch, class: 'btn btn-primary btn-lg qo-btn-primary' %>
     <%= render 'outfits/outfit_carousel', outfit: outfit %>
   <% end %>
 <% end %>
@@ -13,6 +14,7 @@
 <h2>Failed Outfits</h2>
 <% @outfits.each do |outfit| %>
   <% if outfit.status == 'validated' && outfit.rating < 6 %>
+  	<%= link_to 'select outfit of the day', outfit_counter_path(outfit), method: :patch, class: 'btn btn-primary btn-lg qo-btn-primary' %>
     <%= render 'outfits/outfit_carousel', outfit: outfit %>
   <% end %>
 <% end %>
@@ -21,6 +23,7 @@
 <h2>Pending</h2>
 <% @outfits.each do |outfit| %>
   <% if outfit.status == 'pending' %>
+  	<%= link_to 'select outfit of the day', outfit_counter_path(outfit), method: :patch, class: 'btn btn-primary btn-lg qo-btn-primary' %>
     <%= render 'outfits/outfit_carousel', outfit: outfit %>
   <% end %>
 <% end %>
