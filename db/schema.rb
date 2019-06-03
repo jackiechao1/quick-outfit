@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_03_145404) do
+ActiveRecord::Schema.define(version: 2019_06_03_183933) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,8 +23,8 @@ ActiveRecord::Schema.define(version: 2019_06_03_145404) do
     t.datetime "updated_at", null: false
     t.string "photo"
     t.string "style"
-    t.string "seed_image"
     t.integer "counter", default: 0, null: false
+    t.string "seed_image"
     t.index ["user_id"], name: "index_items_on_user_id"
   end
 
@@ -46,6 +46,16 @@ ActiveRecord::Schema.define(version: 2019_06_03_145404) do
     t.integer "rating", default: 0, null: false
     t.text "review"
     t.index ["user_id"], name: "index_outfits_on_user_id"
+  end
+
+  create_table "planned_outfits", force: :cascade do |t|
+    t.bigint "outfit_id"
+    t.bigint "user_id"
+    t.date "date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["outfit_id"], name: "index_planned_outfits_on_outfit_id"
+    t.index ["user_id"], name: "index_planned_outfits_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
