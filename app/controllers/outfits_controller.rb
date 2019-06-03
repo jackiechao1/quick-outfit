@@ -18,10 +18,7 @@ class OutfitsController < ApplicationController
 
   def counter
     outfit = Outfit.find(params[:outfit_id])
-    outfit.items.each do |item|
-      item.counter += 1
-      item.save
-    end
+    outfit.increment_counter
   end
 
   def create

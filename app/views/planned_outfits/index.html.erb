@@ -1,0 +1,11 @@
+<%= month_calendar attribute: :date, events: @planned_outfits do |date, planned_outfits| %>
+  <%= date.day %>
+
+  <% planned_outfits.each do |planned_outfit| %>
+     <div>
+       <%= planned_outfit.outfit.name %>
+     </div>
+   <% end %>
+<% end %>
+
+

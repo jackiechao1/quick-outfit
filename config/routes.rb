@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
   resources :outfits do
+    resources :planned_outfits, only: [ :create ]
   	patch :validate, to: 'outfits#validate'
     patch :counter, to: 'outfits#counter'
   end
   resources :items
+
+  resources :planned_outfits, only: [ :index, :destroy, :update ]
 
   get "/csscomponents", to: 'pages#csscomponents'
   get "/menu", to: 'pages#menu'
