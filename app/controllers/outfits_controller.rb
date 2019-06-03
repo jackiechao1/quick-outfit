@@ -8,9 +8,11 @@ class OutfitsController < ApplicationController
   end
 
   def validate
-    @outfit = Outfit.find(params[:outfit_id])
-    @outfit.status = 'validated'
-    @outfit.save
+    outfit = Outfit.find(params[:outfit_id])
+    outfit.rating = params[:rating_outfit].to_i
+    outfit.review = params[:review_outfit]
+    outfit.status = 'validated'
+    outfit.save
     redirect_back(fallback_location: root_path)
   end
 

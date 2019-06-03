@@ -5,8 +5,7 @@
 <% @outfits.each do |outfit| %>
   <div class= "outfit-saved">
     <h2> <%= outfit.name %></h2>
-      <%= link_to 'Validate', outfit_validate_path(outfit), class: 'btn btn-primary btn-lg qo-btn-primary', method: :patch, data: { confirm: 'Are you sure?' } %>
-    <%= link_to 'delete', outfit_path(outfit), method: :delete, class: 'btn btn-secondary btn-lg qo-btn-primary' %>
+    <%= render 'pages/outfit_review', outfit: outfit %>
   </div>
     <div class="slick-carousel">
       <% outfit.items.each do |t| %>
