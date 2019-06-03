@@ -1,115 +1,33 @@
 <h1>Wardrobe</h1>
-
 <%= form_tag outfits_path, method: :post do %>
   <h2>Tops</h2>
-    <div class="slick-carousel">
-      <% @tops.each do |t| %>
-        <label for="post_top_ids_<%= t.id %>">
-          <div>
-            <div class="clothes-card">
-              <div class="clothes-card-photo">
-                <%= cl_image_tag(t.photo, secure: true) %>
-              </div>
-              <div class="clothes-card-footer">
-                <p> <%= t.style %></p>
-                <%= link_to 'delete', item_path(t), method: :delete, class: 'd-none delete-button' %>
-              </div>
-            </div>
-          </div>
-        </label>
-      <% end %>
-  </div>
-  <% @tops.each do |t| %>
-    <input type="checkbox" name="item[ids][]" class="d-none clothes-card-checkbox" value="<%= t.id %>"id="post_top_ids_<%= t.id %>"></input>
-  <% end %>
-
+  <%= render 'items/carousel', items: @tops %>
 
   <h2>Bottoms</h2>
-  <div class="slick-carousel">
-    <% @bottoms.each do |b| %>
-      <label for="post_bottom_ids_<%= b.id %>">
-        <div>
-          <div class="clothes-card">
-            <div class="clothes-card-photo">
-              <%= cl_image_tag(b.photo, secure: true) %>
-            </div>
-            <div class="clothes-card-footer">
-              <p> <%= b.style %></p>
-              <%= link_to 'delete', item_path(b), method: :delete, class: 'd-none delete-button' %>
-            </div>
-          </div>
-        </div>
-      </label>
-    <% end %>
-  </div>
-  <% @bottoms.each do |bottom| %>
-    <input type="checkbox" name="item[ids][]" class="d-none clothes-card-checkbox" value="<%= bottom.id %>"id="post_bottom_ids_<%= bottom.id %>"></input>
-  <% end %>
+  <%= render 'items/carousel', items: @bottoms %>
 
   <h2>Shoes</h2>
-  <div class="slick-carousel">
-    <% @shoes.each do |s| %>
-      <label for="post_shoes_ids_<%= s.id %>">
-        <div>
-          <div class="clothes-card">
-            <div class="clothes-card-photo">
-              <%= cl_image_tag(s.photo, secure: true) %>
-            </div>
-            <div class="clothes-card-footer">
-              <p> <%= s.style %></p>
-              <%= link_to 'delete', item_path(s), method: :delete, class: 'd-none delete-button' %>
-            </div>
-          </div>
-        </div>
-      </label>
-    <% end %>
-    <% @shoes.each do |shoe| %>
-      <input type="checkbox" name="item[ids][]" class="d-none clothes-card-checkbox" value="<%= shoe.id %>"id="post_shoes_ids_<%= shoe.id %>"></input>
-    <% end %>
-  </div>
-
-  <h2>Accessories</h2>
-  <div class="slick-carousel">
-    <% @accessories.each do |a| %>
-      <label for="post_accessories_ids_<%= a.id %>">
-        <div>
-          <div class="clothes-card">
-            <div class="clothes-card-photo">
-                <%= cl_image_tag(a.photo, secure: true) %>
-              </div>
-              <div class="clothes-card-footer">
-                <p> <%= a.style %></p>
-                <%= link_to 'delete', item_path(a), method: :delete, class: 'd-none delete-button' %>
-            </div>
-          </div>
-        </div>
-      </label>
-    <% end %>
-    <% @accessories.each do |a| %>
-      <input type="checkbox" name="item[ids][]" class="d-none clothes-card-checkbox" value="<%= a.id %>"id="post_accessories_ids_<%= a.id %>"></input>
-    <% end %>
-  </div>
+  <%= render 'items/carousel', items: @shoes %>
 
   <div class= "items-save-button">
-  <div class='btn btn-primary btn-lg qo-btn-primary' data-target="#add-outfit" data-toggle='modal'>save</div>
+    <div class='btn btn-primary btn-lg qo-btn-primary' data-target="#add-outfit" data-toggle='modal'>save</div>
   </div>
-  <div class="modal fade" id="add-outfit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h3 class="modal-title" id="exampleModalLabel">What's the name of the outfit</h3>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <%= text_field_tag :outfit_name, nil, class:"border"  %>
-            <%= button_tag :save, class: 'btn btn-primary btn-lg qo-btn-primary' %>
-          </div>
-
+  <div class="modal fade" id="add-outfit" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title">What's the name of the outfit</h3>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <%= text_field_tag :outfit_name, nil, class: "border"  %>
+          <%= button_tag :save, class: 'btn btn-primary btn-lg qo-btn-primary' %>
         </div>
       </div>
     </div>
-
+  </div>
 <% end %>
+
 <%= javascript_pack_tag("items_index")  %>

@@ -10,8 +10,15 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin: fixed;
 }
 
+.slick-carousel {
+  div {
+
+  //max-width: 475px;
+  }
+}
 .clothes-card-outfits {
 
   display: flex;
