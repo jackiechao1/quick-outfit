@@ -178,3 +178,5 @@ a.qo-btn-secondary {
   padding: 24px;
 }
 
+
+          //<%= select_tag :rating_outfit, options_for_select((1..10).to_a) %>

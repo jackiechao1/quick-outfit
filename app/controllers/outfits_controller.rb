@@ -9,7 +9,7 @@ class OutfitsController < ApplicationController
 
   def validate
     outfit = Outfit.find(params[:outfit_id])
-    outfit.rating = params[:rating_outfit].to_i
+    outfit.rating = params[:stars].to_i
     outfit.review = params[:review_outfit]
     outfit.status = 'validated'
     outfit.save
