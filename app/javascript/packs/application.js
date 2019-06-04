@@ -60,8 +60,11 @@ document.querySelector(".save-btn").addEventListener("click", (event) => {
   if (uniq.length >= 3) {
     event.stopPropagation();
     alert("too many colors you fool...");
-  } else if (uniq.includes("pink") && uniq.includes('yellow')) {
+  } else if (uniq.length < 2 || (uniq.includes("pink") && uniq.includes('yellow'))) {
     event.stopPropagation();
     alert("bruh are you kidding...");
+  } else if (uniq.includes("yellow") && uniq.includes("red")) {
+    event.stopPropagation();
+    alert("yellow doesn't match with red")
   }
 });
