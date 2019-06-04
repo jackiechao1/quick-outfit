@@ -3,13 +3,6 @@ import "slick-carousel";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css"
 
-$(".outfits-carousel").slick({
-  infinite: true,
-  slidesToShow: 4,
-  slidesToScroll: 4,
-  arrows: false
-});
-
 $('.slick-carousel').slick({
   infinite: true,
   centerMode: true,
