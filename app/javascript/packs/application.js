@@ -60,22 +60,25 @@ $('input[type="checkbox"]').click(function(){
 });
 
 document.querySelector(".save-btn").addEventListener("click", (event) => {
-  if (uniq.length >= 3) {
+  if (uniq.length > 3) {
     event.stopPropagation();
     alert("too many colors you fool...");
-  } else if (uniq.length < 2 || (uniq.includes("pink") && uniq.includes('yellow'))) {
+    location.reload();
+  } else if ((uniq.includes("pink") && uniq.includes('yellow'))) {
     event.stopPropagation();
     alert("bruh are you kidding...");
+    location.reload();
   } else if (uniq.includes("yellow") && uniq.includes("red")) {
     event.stopPropagation();
     alert("Yellow doesn't match with red")
+    location.reload();
   } else if (uniq.includes("brown") && uniq.includes("pink")) {
     event.stopPropagation();
     alert("Brown doesn't match with pink")
+    location.reload();
   } else if (uniq.includes("blue") && uniq.includes("red")) {
     event.stopPropagation();
     alert("Blue doesn't match with red")
-  } else if (uniq.includes("") && uniq.includes("")) {
-    
-  }
+    location.reload();
+  } 
 });
