@@ -5,20 +5,18 @@
 
 <h2> ✅ Outfits</h2>
 <% @outfits.each do |outfit| %>
-  <% if outfit.status == 'validated' && outfit.rating >= 6 %>
-  	<%= link_to 'select outfit of the day', outfit_planned_outfits_path(outfit, date: Date.today), method: :post, class: 'btn btn-primary btn-lg qo-btn-primary' %>
+  <% if outfit.status == 'validated' && outfit.rating >= 3 %>
     <%= render 'outfits/outfit_carousel', outfit: outfit %>
   <% end %>
 <% end %>
 
 <h2>⛔️ Outfits</h2>
 <% @outfits.each do |outfit| %>
-  <% if outfit.status == 'validated' && outfit.rating < 6 %>
-  	<%= link_to 'select outfit of the day', outfit_counter_path(outfit), method: :patch, class: 'btn btn-primary btn-lg qo-btn-primary' %>
+  <% if outfit.status == 'validated' && outfit.rating < 3 %>
     <%= render 'outfits/outfit_carousel', outfit: outfit %>
   <% end %>
 <% end %>
-
+<!-- 
 
 <h2>⏱ Pending</h2>
 <% @outfits.each do |outfit| %>
@@ -27,7 +25,7 @@
     <%= render 'outfits/outfit_carousel', outfit: outfit %>
   <% end %>
 <% end %>
-
+ -->
 
 
 
