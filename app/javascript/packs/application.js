@@ -68,6 +68,14 @@ document.querySelector(".save-btn").addEventListener("click", (event) => {
     alert("bruh are you kidding...");
   } else if (uniq.includes("yellow") && uniq.includes("red")) {
     event.stopPropagation();
-    alert("yellow doesn't match with red")
+    alert("Yellow doesn't match with red")
+  } else if (uniq.includes("brown") && uniq.includes("pink")) {
+    event.stopPropagation();
+    alert("Brown doesn't match with pink")
+  } else if (uniq.includes("blue") && uniq.includes("red")) {
+    event.stopPropagation();
+    alert("Blue doesn't match with red")
+  } else if (uniq.includes("") && uniq.includes("")) {
+    
   }
 });
