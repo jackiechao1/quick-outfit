@@ -9,4 +9,11 @@ class Outfit < ApplicationRecord
       item.save
     end
   end
+
+  def decrement_counter
+    items.each do |item|
+      item.counter -= 1
+      item.save
+    end
+  end
 end
