@@ -15,8 +15,7 @@ h1, h2, h3, p{
   transition: opacity ease 1s;
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  width: 220px;
-  height: 220px;
+  width: 200px;
   background: white;
   display: flex;
   flex-direction: column;
@@ -29,9 +28,9 @@ h1, h2, h3, p{
 
 .clothes-card-photo > img {
   border-radius: 5px 5px 0px 0px;
-  height: 190px;
+  height: calc(34vh - 120px);
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .clothes-card-footer{
