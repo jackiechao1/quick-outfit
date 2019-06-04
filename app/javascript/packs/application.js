@@ -45,3 +45,23 @@ $(document).ready(function(){
 
   $('#created-outfit').modal('show')
 });
+
+let uniq = [];
+$('input[type="checkbox"]').click(function(){
+  const color_array = [];
+  const clicked = document.querySelectorAll(".clothes-card.active")
+  clicked.forEach((element) => {
+    color_array.push(element.dataset.color);
+    uniq = [...new Set(color_array)];
+  });
+});
+
+document.querySelector(".save-btn").addEventListener("click", (event) => {
+  if (uniq.length >= 3) {
+    event.stopPropagation();
+    alert("too many colors you fool...");
+  } else if (uniq.includes("pink") && uniq.includes('yellow')) {
+    event.stopPropagation();
+    alert("bruh are you kidding...");
+  }
+});

@@ -1,15 +1,15 @@
 <div class="slick-carousel">
-      <% items.each do |t| %>
-        <label for="post_top_ids_<%= t.id %>">
+      <% items.each do |item| %>
+        <label for="item_<%= item.id %>">
           <div>
-            <div class="clothes-card">
+            <div class="clothes-card" data-color="<%= item.color %>">
               <div class="clothes-card-photo">
-                <%= cl_image_tag(t.photo, secure: true) %>
+                <%= cl_image_tag(item.photo, secure: true) %>
               </div>
               <div class="clothes-card-footer">
-                <p> <%= t.style %></p>
-                <p> <%= t.counter %></p>
-                <%= link_to item_path(t), method: :delete, class: 'd-none delete-button' do %>
+                <p> <%= item.style %></p>
+                <p> <%= item.counter %></p>
+                <%= link_to item_path(item), method: :delete, class: 'd-none delete-button' do %>
                   <i class="fas fa-times-circle"></i>
                 <% end  %>
               </div>
@@ -18,6 +18,6 @@
         </label>
       <% end %>
   </div>
-  <% items.each do |t| %>
-    <input type="checkbox" name="item[ids][]" class="d-none clothes-card-checkbox" value="<%= t.id %>"id="post_top_ids_<%= t.id %>"></input>
+  <% items.each do |item| %>
+    <input type="checkbox" name="item[ids][]" class="d-none clothes-card-checkbox" value="<%= item.id %>"id="item_<%= item.id %>" data-color="<%= item.color %>"></input>
   <% end %>

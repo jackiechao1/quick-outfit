@@ -10,7 +10,7 @@
   <%= render 'items/carousel', items: @shoes %>
 
   <div class= "items-save-button">
-    <div class='btn btn-primary btn-lg qo-btn-primary' data-target="#add-outfit" data-toggle='modal'>save</div>
+    <div class='btn btn-primary btn-lg qo-btn-primary save-btn' data-target="#add-outfit" data-toggle='modal'>save</div>
   </div>
   <div class="modal fade" id="add-outfit" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -23,11 +23,11 @@
         </div>
         <div class="modal-body">
           <%= text_field_tag :outfit_name, nil, class: "border"  %>
-          <%= button_tag :save, class: 'btn btn-primary btn-lg qo-btn-primary' %>
+          <%= button_tag :save, class: 'btn btn-primary btn-lg qo-btn-primary'%>
         </div>
       </div>
     </div>
   </div>
 <% end %>
 
-<%= javascript_pack_tag("items_index")  %>
+<%= javascript_pack_tag("items_index") %>
