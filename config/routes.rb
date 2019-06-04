@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   end
   resources :items
 
-  resources :planned_outfits, only: [ :index, :destroy, :update ]
+  resources :planned_outfits, only: [ :index, :destroy ]
 
   get "/csscomponents", to: 'pages#csscomponents'
   get "/menu", to: 'pages#menu'

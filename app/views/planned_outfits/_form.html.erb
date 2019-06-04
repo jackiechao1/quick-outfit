@@ -1,0 +1,4 @@
+<% @outfits.each do |outfit| %>
+  <%= link_to 'select outfit of the day', "/outfits/#{outfit.id}/planned_outfits?date=#{date}", method: :post, class: 'btn btn-primary btn-lg qo-btn-primary' %>
+  <%= render 'outfits/outfit_carousel', outfit: outfit %>
+<% end %>
