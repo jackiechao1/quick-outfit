@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css"
 import swal from 'sweetalert'
 
-$('.slick-carousel').slick({
+$('.slick-carousel, .small-carrousel').slick({
   infinite: true,
   centerMode: true,
   slidesToShow: 1,
@@ -42,8 +42,6 @@ $(document).ready(function(){
 
   $('#created-outfit').modal('show')
 });
-
-
 
 const newlyValidatedOutfits = document.querySelectorAll('.newly-validated-outfit')
 if(newlyValidatedOutfits) {
