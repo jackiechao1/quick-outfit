@@ -56,6 +56,23 @@ document.addEventListener("DOMContentLoaded", () => {
 	});
 });
 
+let uniq = [];
+$('input[type="checkbox"]').click(function(){
+  const color_array = [];
+  const clicked = document.querySelectorAll(".clothes-card.active")
+  clicked.forEach((element) => {
+    color_array.push(element.dataset.color);
+    uniq = [...new Set(color_array)];
+  });
+});
+
+const option = {
+      title: "Outfit doesn't match",
+      text: "Blue doesn't go with red.",
+      icon: "error"
+    };
+
+
 document.querySelector(".save-btn").addEventListener("click", (event) => {
   if (uniq.length > 3) {
     event.stopPropagation();

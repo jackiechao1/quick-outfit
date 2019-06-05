@@ -4,12 +4,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css"
 import swal from 'sweetalert'
 
-const option = {
-      title: "Outfit doesn't match",
-      text: "Blue doesn't go with red.",
-      icon: "error"
-    };
-
 $('.slick-carousel').slick({
   infinite: true,
   centerMode: true,
@@ -49,15 +43,6 @@ $(document).ready(function(){
   $('#created-outfit').modal('show')
 });
 
-let uniq = [];
-$('input[type="checkbox"]').click(function(){
-  const color_array = [];
-  const clicked = document.querySelectorAll(".clothes-card.active")
-  clicked.forEach((element) => {
-    color_array.push(element.dataset.color);
-    uniq = [...new Set(color_array)];
-  });
-});
 
 
 const newlyValidatedOutfits = document.querySelectorAll('.newly-validated-outfit')
