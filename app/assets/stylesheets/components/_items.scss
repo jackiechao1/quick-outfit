@@ -13,12 +13,6 @@
   margin: fixed;
 }
 
-.slick-carousel {
-  div {
-
-  //max-width: 475px;
-  }
-}
 .clothes-card-outfits {
 
   display: flex;
@@ -43,6 +37,32 @@
   margin-right: 10px;
 }
 
+.outfit-saved.small {
+  margin: 0px;
+  
+  .container {
+    margin: 0px;
+    width: 100%;
+    .row {
+      margin: 0px;
+    }
+  }
+}
 
+.clothes-card-saved {
+  margin: 10px;
 
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;  
+  }
+}
 
+.saved-outfit-card {
+  border: black solid 2px;
+  max-width: 90vw !important;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+}

@@ -1,16 +1,10 @@
 <h1>Wardrobe</h1>
 <%= form_tag outfits_path, method: :post do %>
-<!--   <div class="logo-teeshirt">
-    <i class="fas fa-tshirt"></i>
-  </div> -->
+  
   <%= render 'items/carousel', items: @tops %>
 
-  <%# image_tag "pants.png", class:'pants'%>
   <%= render 'items/carousel', items: @bottoms %>
 
-<!--   <div class="logo-shoes">
-    <i class="fas fa-shoe-prints"></i>
-  </div> -->
   <%= render 'items/carousel', items: @shoes %>
 
   <div class= "items-save-button">

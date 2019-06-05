@@ -3,20 +3,69 @@
 
 <h1>Saved Outfits</h1>
 
-<h2> ✅ Outfits</h2>
-<% @outfits.each do |outfit| %>
-  <% if outfit.status == 'validated' && outfit.rating >= 3 %>
-    <%= render 'outfits/outfit_carousel', outfit: outfit %>
-  <% end %>
-<% end %>
-
-<h2>⛔️ Outfits</h2>
-<% @outfits.each do |outfit| %>
-  <% if outfit.status == 'validated' && outfit.rating < 3 %>
-    <%= render 'outfits/outfit_carousel', outfit: outfit %>
-  <% end %>
-<% end %>
-
+<ul class="nav nav-tabs outfit-tabs" id="myTab" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="validated-tab" data-toggle="tab" href="#validated" role="tab" aria-controls="validated" aria-selected="true">Validated</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="rejected-tab" data-toggle="tab" href="#rejected" role="tab" aria-controls="rejected" aria-selected="false">Rejected</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="pending-tab" data-toggle="tab" href="#pending" role="tab" aria-controls="pending" aria-selected="false">Pending</a>
+  </li>
+</ul>
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="validated" role="tabpanel" aria-labelledby="validated-tab">
+    <ul class="nav nav-tabs" id="myTab2" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" id="work-clothes-tab" data-toggle="tab" href="#work-clothes" role="tab" aria-controls="work-clothes" aria-selected="true">work</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="casual-clothes-tab" data-toggle="tab" href="#casual-clothes" role="tab" aria-controls="casual-clothes" aria-selected="false">casual</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="sport-tab" data-toggle="tab" href="#sport-clothes" role="tab" aria-controls="sport-clothes" aria-selected="false">Sportswear</a>
+      </li>
+    </ul>
+    <div class="tab-content" id="myTabContent2">
+      <div class="tab-pane fade show active" id="work-clothes" role="tabpanel" aria-labelledby="work-clothes-tab">
+        <% @outfits.each do |outfit| %>
+          <% if outfit.status == 'validated' && outfit.rating >= 3 && outfit.items.first.style == "work"%>
+            <%= render 'outfits/saved_outfit_cards', outfit: outfit, small: true %>
+          <% end %>
+        <% end %>  
+      </div>
+      <div class="tab-pane fade" id="casual-clothes" role="tabpanel" aria-labelledby="casual-clothes">
+        <% @outfits.each do |outfit| %>
+          <% if outfit.status == 'validated' && outfit.rating >= 3 && outfit.items.first.style == "casual" %>
+            <%= render 'outfits/saved_outfit_cards', outfit: outfit, small: true %>
+          <% end %>
+        <% end %>  
+      </div>
+      <div class="tab-pane fade" id="sport-clothes" role="tabpanel" aria-labelledby="sport-tab">
+        <% @outfits.each do |outfit| %>
+          <% if outfit.status == 'validated' && outfit.rating >= 3 && outfit.items.first.style == "sportswear" %>
+            <%= render 'outfits/saved_outfit_cards', outfit: outfit, small: true %>
+          <% end %>
+        <% end %> 
+      </div>
+    </div>
+  </div>
+  <div class="tab-pane fade" id="rejected" role="tabpanel" aria-labelledby="rejected-tab">
+    <% @outfits.each do |outfit| %>
+      <% if outfit.status == 'validated' && outfit.rating < 3 %>
+        <%= render 'outfits/outfit_carousel', outfit: outfit %>
+      <% end %>
+    <% end %>
+  </div>
+  <div class="tab-pane fade" id="pending" role="tabpanel" aria-labelledby="pending-tab">
+    <% @outfits.each do |outfit| %>
+      <% if outfit.status == 'pending' %>
+        <%= render 'outfits/outfit_carousel', outfit: outfit %>
+      <% end %>
+    <% end %>
+  </div>
+</div>
 
 <% unless @newly_validated_outfits.empty? %>
   <% @newly_validated_outfits.each do |outfit| %>

@@ -1,9 +1,8 @@
 <div class= "outfit-saved">
-<!--   <h3 class="d-inline"> <%= link_to truncate(outfit.name, { length: 10 }), outfit_path(outfit) %></h3> -->
   <div class= "items-save-button">
-    <div class='d-line' data-target="#outfit-show" data-toggle='modal'><%= outfit.name %></div>
+    <div class='d-line' data-target="#outfit-show-<%= outfit.id %>" data-toggle='modal'><%= outfit.name %></div>
   </div>
-  <div class="modal fade" id="outfit-show" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal fade" id="outfit-show-<%= outfit.id %>" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -21,17 +20,31 @@
     </div>
   </div>
 </div>
-<div class="slick-carousel">
-  <% outfit.items.each do |t| %>
-    <div>
-      <div class="clothes-card-saved">
-        <div class="clothes-card-photo-saved">
-          <%= cl_image_tag(t.photo, secure: true) %>
+<% if defined?(small) %>
+  <div class="small-carrousel">
+    
+    <% outfit.items.each do |t| %>
+        <div class="clothes-card-saved">
+            <%= cl_image_tag(t.photo, secure: true) %>
         </div>
-        <div class="clothes-card-footer-saved">
-          <p> <%= t.style %></p>
+    <% end %>
+  </div>
+<% else %>
+  <div class="slick-carousel">
+    <% outfit.items.each do |t| %>
+      <div>
+        <div class="clothes-card-saved">
+          <div class="clothes-card-photo-saved">
+            <%= cl_image_tag(t.photo, secure: true) %>
+          </div>
+          <div class="clothes-card-footer-saved">
+            <p> <%= t.style %></p>
+          </div>
         </div>
       </div>
-    </div>
-  <% end %>
-</div>
+    <% end %>
+  </div>
+<% end %>
+
+
+
