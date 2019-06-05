@@ -1,6 +1,14 @@
 class OutfitsController < ApplicationController
   def index
     @outfits = Outfit.where(user: current_user)
+    # check if there are outfits with status: 'validated' AND validation_seen: false
+    # if so, save them into a @newly_validated_outfits
+    @newly_validated_outfits = Outfit.where(user: current_user, status: 'validated', validation_seen: false)
+    # set all @newly_validated_outfits to validation_seen: true
+    @newly_validated_outfits.each do |outfit|
+      outfit.validation_seen = true
+      outfit.save
+    end
   end
 
   def show
