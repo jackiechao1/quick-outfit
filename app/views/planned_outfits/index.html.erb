@@ -6,21 +6,23 @@
   <br>
   <%= month_calendar attribute: :date, events: @planned_outfits do |date, planned_outfits| %>
 
-      <%= date.day %>
+
     <% planned_outfit = current_user.planned_outfits.find_by(date: date) %>
 
     <% if planned_outfit %>
-      <%= link_to 'delete', planned_outfit_path(planned_outfit), method: :delete, class: 'btn btn-primary btn-lg qo-btn-primary' %>
+      <%= link_to date.day, planned_outfit_path(planned_outfit), method: :delete, class: 'btn btn-primary btn-lg qo-btn-primary btn-calendar' %>
     <% else %>
-      <span type="button" class= "fas fa-plus-circle" data-toggle="modal" data-target="#dayModal-<%= date %>">
+      <span type="button" data-toggle="modal" data-target="#dayModal-<%= date %>">
+        <%= date.day %>
+      </span>
     <% end %>
-    </span>
 
-    <% planned_outfits.each do |planned_outfit| %>
-       <div>
-          <%= planned_outfit.outfit.name %>
-       </div>
-     <% end %>
+
+    <%# planned_outfits.each do |planned_outfit| %>
+       <!-- <div> -->
+          <%#= planned_outfit.outfit.name %>
+       <!-- </div> -->
+     <%# end %>
 
     <div class="modal fade" id="dayModal-<%= date %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
