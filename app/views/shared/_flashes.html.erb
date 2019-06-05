@@ -19,7 +19,10 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h3 class="modal-title" id="exampleModalLabel">Outfit pending confirmation</h3>
+          <h3 class="modal-title" id="exampleModalLabel">Outfit pending confirmation ?
+            <%=link_to 'wardrobe', '/items', class: 'btn btn-primary btn-lg qo-btn-primary'%>
+            <%=link_to 'outfits', '/outfits', class: 'btn btn-primary btn-lg qo-btn-primary'%>
+          </h3>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
