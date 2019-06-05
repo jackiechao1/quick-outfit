@@ -16,16 +16,11 @@
     <%= render 'outfits/outfit_carousel', outfit: outfit %>
   <% end %>
 <% end %>
-<!-- 
 
-<h2>⏱ Pending</h2>
-<% @outfits.each do |outfit| %>
-  <% if outfit.status == 'pending' %>
-  	<%= link_to 'select outfit of the day', outfit_counter_path(outfit), method: :patch, class: 'btn btn-primary btn-lg qo-btn-primary' %>
-    <%= render 'outfits/outfit_carousel', outfit: outfit %>
+
+<% unless @newly_validated_outfits.empty? %>
+  <% @newly_validated_outfits.each do |outfit| %>
+    <div data-outfit-name="<%= outfit.name %>" class="newly-validated-outfit hidden"></div>
   <% end %>
 <% end %>
- -->
-
-
 

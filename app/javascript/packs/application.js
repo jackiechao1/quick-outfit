@@ -2,12 +2,19 @@ import "bootstrap";
 import "slick-carousel";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css"
+import swal from 'sweetalert'
+
+const option = {
+      title: "Outfit doesn't match",
+      text: "Blue doesn't go with red.",
+      icon: "error"
+    };
 
 $('.slick-carousel').slick({
   infinite: true,
   centerMode: true,
-  slidesToShow: 4,
-  slidesToScroll: 4,
+  slidesToShow: 1,
+  slidesToScroll: 1,
   variableWidth: true,
   arrows: false,
   responsive: [
@@ -52,26 +59,16 @@ $('input[type="checkbox"]').click(function(){
   });
 });
 
-document.querySelector(".save-btn").addEventListener("click", (event) => {
-  if (uniq.length > 3) {
-    event.stopPropagation();
-    alert("too many colors you fool...");
-    location.reload();
-  } else if ((uniq.includes("pink") && uniq.includes('yellow'))) {
-    event.stopPropagation();
-    alert("bruh are you kidding...");
-    location.reload();
-  } else if (uniq.includes("yellow") && uniq.includes("red")) {
-    event.stopPropagation();
-    alert("Yellow doesn't match with red")
-    location.reload();
-  } else if (uniq.includes("brown") && uniq.includes("pink")) {
-    event.stopPropagation();
-    alert("Brown doesn't match with pink")
-    location.reload();
-  } else if (uniq.includes("blue") && uniq.includes("red")) {
-    event.stopPropagation();
-    alert("Blue doesn't match with red")
-    location.reload();
-  } 
-});
+
+const newlyValidatedOutfits = document.querySelectorAll('.newly-validated-outfit')
+if(newlyValidatedOutfits) {
+  newlyValidatedOutfits.forEach((element) => {
+    const outfitName = element.dataset.outfitName
+    const approved = {
+      title: 'Outfit approved',
+      text: `Your outfit ${outfitName}`,
+      icon: 'success'
+    };
+    swal(approved);
+  })
+}
