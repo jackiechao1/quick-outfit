@@ -3,7 +3,6 @@ class ItemsController < ApplicationController
     @tops = Item.where(category: 'top', user: current_user)
     @bottoms = Item.where(category: 'bottom', user: current_user)
     @shoes = Item.where(category: 'shoes', user: current_user)
-    @accessories = Item.where(category: 'accessories', user: current_user)
     @item = Item.new
     @outfit = Outfit.new
   end
