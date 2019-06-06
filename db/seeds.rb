@@ -15,7 +15,7 @@ User.destroy_all
 
 marc = User.create!(email: "marc@email.com", password: "123456")
 User.create!(email: "admin@email.com", password: "123456", admin: true)
-
+puts "creating-items"
 item_1 = Item.create!(category: "top", color: "black", style: "work", photo: File.open("db/seed_images/jacket-top-work-black.jpg"), user: marc)
 
 item_2 = Item.create!(category: "top", color: "grey", style: "work", photo: File.open("db/seed_images/jacket-top-work-grey.jpg"), user: marc)
@@ -52,34 +52,35 @@ item_17 = Item.create!(category: "top", color: "white", style: "casual", photo: 
 
 item_18 = Item.create!(category: "top", color: "white", style: "work", photo: File.open("db/seed_images/white-shirt-work-shirt.jpg"), user: marc)
 
-
-outfit_1 = Outfit.create!(name: "interview", user: marc, status: "Validated", rating: 4, review: "great to wear for special occasion, or job interviews")
+puts "creating-outfits"
+outfit_1 = Outfit.create!(name: "interview", user: marc, status: "validated", rating: 4, review: "great to wear for special occasion, or job interviews")
 
 OutfitItem.create!(outfit: outfit_1, item: item_1)
 OutfitItem.create!(outfit: outfit_1, item: item_6)
 OutfitItem.create!(outfit: outfit_1, item: item_11)
 OutfitItem.create!(outfit: outfit_1, item: item_18)
 
-outfit_2 = Outfit.create!(name: "casual day", user: marc, status: "Validated", rating: 5, review: "perfect for a coding day")
+outfit_2 = Outfit.create!(name: "casual day", user: marc, status: "validated", rating: 5, review: "perfect for a coding day")
 
 OutfitItem.create!(outfit: outfit_2, item: item_3)
 OutfitItem.create!(outfit: outfit_2, item: item_4)
 OutfitItem.create!(outfit: outfit_2, item: item_17)
 OutfitItem.create!(outfit: outfit_2, item: item_10)
 
-outfit_3 = Outfit.create!(name: "sport", user: marc, status: "Validated", rating: 3, review: "hope you will score some goals today 😉")
+outfit_3 = Outfit.create!(name: "sport", user: marc, status: "validated", rating: 3, review: "hope you will score some goals today 😉")
 
-OutfitItem.create!(outfit: outfit_3, item: item_1)
-OutfitItem.create!(outfit: outfit_3, item: item_6)
-OutfitItem.create!(outfit: outfit_3, item: item_11)
+OutfitItem.create!(outfit: outfit_3, item: item_13)
+OutfitItem.create!(outfit: outfit_3, item: item_14)
+OutfitItem.create!(outfit: outfit_3, item: item_16)
 
-outfit_4 = Outfit.create!(name: "interview v2", user: marc, status: "Validated", rating: 3, review: "it's fine but generally it's better to have the same color in pants and vest")
+outfit_4 = Outfit.create!(name: "interview v2", user: marc, status: "validated", rating: 3, review: "it's fine but generally it's better to have the same color in pants and vest")
 
-OutfitItem.create!(outfit: outfit_1, item: item_2)
-OutfitItem.create!(outfit: outfit_1, item: item_6)
-OutfitItem.create!(outfit: outfit_1, item: item_11)
-OutfitItem.create!(outfit: outfit_1, item: item_18)
+OutfitItem.create!(outfit: outfit_4, item: item_2)
+OutfitItem.create!(outfit: outfit_4, item: item_6)
+OutfitItem.create!(outfit: outfit_4, item: item_11)
+OutfitItem.create!(outfit: outfit_4, item: item_18)
 
+puts "finish"
 #category, collection: ['top', 'bottom', 'shoes'] %>
 #color, collection: ['white', 'black', 'grey', 'red', 'brown', 'blue', 'green', 'pink', 'yellow'] %>
 #style, collection: ['work', 'casual', 'sportswear'] %>
