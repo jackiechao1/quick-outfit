@@ -13,4 +13,14 @@ class PagesController < ApplicationController
   def validation
     @outfits = Outfit.where(status: 'pending')
   end
+
+  def random
+    tops = Item.where(category: 'top', user: current_user)
+    bottoms = Item.where(category: 'bottom', user: current_user)
+    shoes = Item.where(category: 'shoes', user: current_user)
+    
+    @top = tops.sample
+    @bottom = bottoms.sample
+    @shoe = shoes.sample
+  end
 end
