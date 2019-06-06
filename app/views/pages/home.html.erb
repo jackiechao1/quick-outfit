@@ -1,12 +1,12 @@
-
+<br>
+<br>
 <h1>Quick Outfit</h1>
 <div class="index-container">
   <div id="qo-main-home">
     <%=link_to '/menu', class: 'logo-menu' do %>
-        <i class="fas fa-stopwatch"></i>
+        <canvas id="canvas" width="300" height="300"></canvas>
     <% end %>
   </div>
-
-  <%= image_tag "angelina.jpg", class:'landing-image'%>
-
 </div>
+
+<%= javascript_pack_tag "animation" %>
