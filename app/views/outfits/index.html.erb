@@ -54,7 +54,7 @@
   <div class="tab-pane fade" id="rejected" role="tabpanel" aria-labelledby="rejected-tab">
     <% @outfits.each do |outfit| %>
       <% if outfit.status == 'validated' && outfit.rating < 3 %>
-        <%= render 'outfits/outfit_carousel', outfit: outfit %>
+        <%= render 'outfits/saved_outfit_cards', outfit: outfit, small: true %>
       <% end %>
     <% end %>
   </div>

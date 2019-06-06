@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <div class='d-line' data-target="#outfit-show" data-toggle='modal' style="margin-top: 5px;">
+    <div class='d-line' data-target="#outfit-show-<%= outfit.id %>" data-toggle='modal' style="margin-top: 5px;">
       <strong><%= outfit.name %></strong>
     </div>
     <div class="expand">
@@ -46,7 +46,7 @@
         
   
 
-<div class="modal fade" id="outfit-show" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="modal fade" id="outfit-show-<%= outfit.id %>" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
