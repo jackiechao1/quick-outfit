@@ -8,6 +8,18 @@
 
 h1{
   text-align: center;
+  font-weight: bolder;
+}
+
+.logo-home{
+  position: relative;
+
+  img{
+    width: 60px;
+    position: absolute;
+    top: 61%;
+    right: 9%;
+  }
 }
 
 .index-container {
@@ -17,10 +29,55 @@ h1{
   align-items: center;
   height: 50vh;
   width: 100%;
+
 }
 
 @media(min-width: 600px) {
   .landing-image {
     display: none;
   }
+}
+
+#lab_social_icon_footer {
+  padding: 0.5rem 1rem;
+  background-color: #c9d2dd;
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+}
+
+#lab_social_icon_footer a {
+  color: #333;
+}
+
+#lab_social_icon_footer .social:hover {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+
+#lab_social_icon_footer .social {
+  -webkit-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  -o-transform: scale(0.8);
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+}
+
+
+#lab_social_icon_footer #social-fb:hover {
+  color: #3B5998;
+}
+
+#lab_social_icon_footer #social-tw:hover {
+  color: #4099FF;
+}
+
+#lab_social_icon_footer #social-gp:hover {
+  color: #d34836;
+}
+
+#lab_social_icon_footer #social-em:hover {
+  color: #f39c12;
 }
