@@ -1,9 +1,9 @@
 class ItemsController < ApplicationController
   def index
-    @tops = Item.where(category: 'top', user: current_user)
-    @bottoms = Item.where(category: 'bottom', user: current_user)
-    @shoes = Item.where(category: 'shoes', user: current_user)
-    @accessories = Item.where(category: 'accessories', user: current_user)
+    @tops = Item.where(category: 'top', user: current_user).order(:count)
+    @bottoms = Item.where(category: 'bottom', user: current_user).order(:count)
+    @shoes = Item.where(category: 'shoes', user: current_user).order(:count)
+    @accessories = Item.where(category: 'accessories', user: current_user).order(:count)
     @item = Item.new
     @outfit = Outfit.new
   end

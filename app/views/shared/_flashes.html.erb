@@ -16,10 +16,11 @@
 <% end %>
 <% if flash[:outfit_created] %>
   <div class="modal fade" id="created-outfit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
+    <div class="modal-dialog " role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h3 class="modal-title" id="exampleModalLabel">Outfit pending confirmation ?
+          <h3 class="modal-title" id="exampleModalLabel">Outfit pending confirmation...
+            <br>
             <%=link_to 'wardrobe', '/items', class: 'btn btn-primary btn-lg qo-btn-primary'%>
             <%=link_to 'outfits', '/outfits', class: 'btn btn-primary btn-lg qo-btn-primary'%>
           </h3>
