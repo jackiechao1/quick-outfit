@@ -93,5 +93,5 @@ document.querySelector(".save-btn").addEventListener("click", (event) => {
   } else if (uniq.includes("blue") && uniq.includes("red")) {
     event.stopPropagation();
     swal(option).then(() => location.reload());
-  } 
+  }
 });
