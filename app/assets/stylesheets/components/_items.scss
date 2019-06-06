@@ -39,6 +39,8 @@
 
 .outfit-saved.small {
   margin: 0px;
+  // max-width: 80vw;
+  max-height: 20vh;
   
   .container {
     margin: 0px;
@@ -49,20 +51,25 @@
   }
 }
 
-.clothes-card-saved {
-  margin: 10px;
-
-  img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;  
-  }
-}
-
 .saved-outfit-card {
-  border: black solid 2px;
-  max-width: 90vw !important;
+  background: #F8F8F8;
+  max-width: 80vw !important;
+  min-width: 80vw !important;
   margin-left: auto;
   margin-right: auto;
   margin-top: 5px;
+  padding: 10px;
+
+}
+
+.collapse .card {
+  border: none;
+}
+
+.arrow-collapse {
+  text-decoration: none;
+  
+  &:hover {
+    text-decoration: none;
+  }
 }
