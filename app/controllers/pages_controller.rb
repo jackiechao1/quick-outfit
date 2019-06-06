@@ -19,7 +19,7 @@ class PagesController < ApplicationController
     bottoms = Item.where(category: 'bottom', user: current_user)
     shoes = Item.where(category: 'shoes', user: current_user)
     
-    @top = tops.sample
+    @tops = tops.sample(2)
     @bottom = bottoms.sample
     @shoe = shoes.sample
   end
