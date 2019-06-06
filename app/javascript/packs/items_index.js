@@ -91,9 +91,4 @@ document.querySelector(".save-btn").addEventListener("click", (event) => {
     option.text = "Brown doesn't go with pink."
     swal(option).then(() => location.reload());
   }
-  // else if (uniq.includes("red") && uniq.includes("red")) {
-  //   debugger
-  //   event.stopPropagation();
-  //   swal(option).then(() => location.reload());
-  // }
 });

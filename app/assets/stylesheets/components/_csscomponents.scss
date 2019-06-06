@@ -1,4 +1,4 @@
-h1, h2, h3, p{
+h1, h2, h3, h4, p{
   color: $typo-color;
   // margin-left: 10px;
   margin-bottom: 10px;
@@ -77,6 +77,9 @@ a.qo-btn-input {
 }
 a.qo-btn-secondary {
   color: white;
+}
+.animated.swing.hanger {
+  // filter: sepia(60%);
 }
 
 .logo {
@@ -273,4 +276,17 @@ a.qo-btn-secondary {
   //   max-width: 15vh !important;
   // }
   // transform: scaley(0.5)
+}
+
+.random-align-buttons {
+  display: flex;
+  justify-content: space-between;
+  a {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+.fas.fa-chevron-left, .fas.fa-plus-circle{
+  color: $blue;
 }
