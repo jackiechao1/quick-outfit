@@ -1,9 +1,8 @@
-
-
-<div class="clothes-card-photo">
-	<% @tops.each do |top| %>
-		<%= cl_image_tag(top.photo, secure: true) %>
-	<% end %>
-	<%= cl_image_tag(@bottom.photo, secure: true) %>
-	<%= cl_image_tag(@shoe.photo, secure: true) %>
+<div class="outfit-grid">
+		<div class="clothes-card-photo">
+        <%= cl_image_tag(@tops[0].photo, secure: true) %>
+        <%= cl_image_tag(@tops[1].photo, secure: true) %>
+        <%= cl_image_tag(@bottom.photo, secure: true) %>
+        <%= cl_image_tag(@shoe.photo, secure: true) %>
+    </div>
 </div>
