@@ -1,11 +1,11 @@
 <div class="container">
   <div class="saved-outfit-card-row" >
-      <span class="pl-2"><strong><%= outfit.name %></strong></span>   
+      <span class="pl-2"><strong><%= outfit.name %></strong></span>
 
       <a class="icon arrow-collapse"  href="#collapse-<%= outfit.id %>" role="button" aria-expanded="false" aria-controls="collapseExample">
         <i class="fas fa-caret-right"></i>
       </a>
-  </div>  
+  </div>
     <div class="collapse saved-outfit-collapse" id="collapse-<%= outfit.id %>">
       <div class="card card-body" style="padding-top: 0px;">
         <div class= "saved-outfit-card" style="">
@@ -25,7 +25,7 @@
           </div>
         </div>
       </div>
-      <div class="small-carrousel">
+      <div class="outfit-grid">
         <% outfit.items.each do |t| %>
 
             <div class="clothes-card-saved-small">
@@ -33,6 +33,6 @@
             </div>
 
         <% end %>
-      </div>      
+      </div>
     </div>
 </div>

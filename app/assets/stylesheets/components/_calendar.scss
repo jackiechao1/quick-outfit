@@ -27,7 +27,7 @@
   }
 
   td {
-    padding: 8px;
+    // padding: 8px;
     vertical-align: top;
     width: 14%;
 
@@ -58,15 +58,14 @@
     text-transform: uppercase;
   }
   .day {
-    height: 12vw;
-    // display: flex;
-    width: 12vw;
+      height: calc(100% / 7);
+    width: calc(100% / 7);
     // align-items: center;
     // justify-content: center;
   }
 
-  .day span {
-    border: 3px solid $blue;
+  .day .qo-calendar-day {
+    border: 1px solid $blue;
     width: 10vw;
     height: 10vw;
     display: flex;
@@ -115,4 +114,24 @@
     align-items: center;
     justify-content: center;
   }
+
+  .modal-footer a {
+    color: white;
+  }
+
+}
+
+.calendar-outfit-card {
+  margin-bottom: 16px;
+  border-bottom: 100px;
+  border-color: red;
+}
+.calendar-outfit-header {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.confirmation-card a{
+  margin-bottom: 10px;
+  position: center;
 }

@@ -1,7 +1,5 @@
-<br>
-<br>
-
-<h1>Saved Outfits</h1>
+<div class="content-container">
+  <h1>Saved Outfits</h1>
 
 <ul class="nav nav-tabs outfit-tabs" id="myTab" role="tablist">
   <li class="nav-item">
@@ -33,21 +31,21 @@
           <% if outfit.status == 'validated' && outfit.rating >= 3 && outfit.items.first.style == "work"%>
             <%= render 'outfits/saved_outfit_cards', outfit: outfit, small: true %>
           <% end %>
-        <% end %>  
+        <% end %>
       </div>
       <div class="tab-pane fade" id="casual-clothes" role="tabpanel" aria-labelledby="casual-clothes">
         <% @outfits.each do |outfit| %>
           <% if outfit.status == 'validated' && outfit.rating >= 3 && outfit.items.first.style == "casual" %>
             <%= render 'outfits/saved_outfit_cards', outfit: outfit, small: true %>
           <% end %>
-        <% end %>  
+        <% end %>
       </div>
       <div class="tab-pane fade" id="sport-clothes" role="tabpanel" aria-labelledby="sport-tab">
         <% @outfits.each do |outfit| %>
           <% if outfit.status == 'validated' && outfit.rating >= 3 && outfit.items.first.style == "sportswear" %>
             <%= render 'outfits/saved_outfit_cards', outfit: outfit, small: true %>
           <% end %>
-        <% end %> 
+        <% end %>
       </div>
     </div>
   </div>
@@ -72,4 +70,5 @@
     <div data-outfit-name="<%= outfit.name %>" class="newly-validated-outfit hidden"></div>
   <% end %>
 <% end %>
+</div>
 

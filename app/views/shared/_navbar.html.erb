@@ -57,6 +57,9 @@
 
 <% elsif params[:action] == "show" || params[:controller] == "outfits" || params[:action] == "validation" || params[:controller] == "planned_outfits" %>
   <div class="d-flex navbar navbar-expand-sm navbar-light navbar-items">
-    <%= render 'layouts/back' %>
+    <%= link_to menu_path, class: 'logo' do %>
+      <i class="fas fa-chevron-left"></i>
+    <% end %>
+    <%= image_tag "Vector.png", id: 'logo' %>
   </div>
 <% end %>
