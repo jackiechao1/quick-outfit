@@ -1,0 +1,5 @@
+meta_product_name: "Quick Outfit"
+meta_title: "Quick outfit - App that dresses you!"
+meta_description: "An app that will help you validate your outfits"
+meta_image: "quickoutfit.png" # should exist in `app/assets/images/`
+twitter_account: "@product_twitter_account"   # required for Twitter Cards

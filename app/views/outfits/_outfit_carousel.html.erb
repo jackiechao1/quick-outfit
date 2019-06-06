@@ -1,6 +1,6 @@
 <div class= "outfit-saved">
   <div class= "items-save-button">
-    <div class='d-line' data-target="#outfit-show-<%= outfit.id %>" data-toggle='modal'><%= outfit.name %></div>
+    <!-- <div class='d-line' data-target="#outfit-show-<%= outfit.id %>" data-toggle='modal'><%#= outfit.name %></div> -->
   </div>
   <div class="modal fade" id="outfit-show-<%= outfit.id %>" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -22,7 +22,7 @@
 </div>
 <% if defined?(small) %>
   <div class="small-carrousel">
-    
+
     <% outfit.items.each do |t| %>
         <div class="clothes-card-saved">
             <%= cl_image_tag(t.photo, secure: true) %>
