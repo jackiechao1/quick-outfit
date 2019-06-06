@@ -1,25 +1,30 @@
 <br>
-<h4>Welcome on Quick-Outfit!</h4>
+
+<h4>Hi Marc !</h4>
+<h1>Welcome to Quick Outfit !</h1>
+<br>
+<h4>Today, it's a very sunny day 😎</h4>
+
 
 
 
 <br>
 <br>
 <br>
-
 
 
 <div id="qo-main-menu">
 
-
-<%=link_to 'All your outfits', '/outfits', class: 'btn btn-primary btn-lg btn-block qo-btn-primary shrink'%>
+<%=link_to 'Calendar', '/planned_outfits', class: 'btn btn-primary btn-lg btn-block qo-btn-primary shrink'%>
 <br>
 
 <%=link_to 'Wardrobe', '/items', class: 'btn btn-primary btn-lg btn-block qo-btn-primary shrink'%>
 <br>
 
-<%=link_to 'Calendar', '/planned_outfits', class: 'btn btn-primary btn-lg btn-block qo-btn-primary shrink'%>
+<%=link_to 'All your outfits', '/outfits', class: 'btn btn-primary btn-lg btn-block qo-btn-primary shrink'%>
 <br>
+
+
 
 
 <% if current_user.admin %>

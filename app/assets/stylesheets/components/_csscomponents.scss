@@ -81,8 +81,8 @@ a.qo-btn-secondary {
 
 .logo {
   i {
-    font-size: 40px;
-    color: $blue;
+    font-size: 30px;
+    color: black;
     padding: 4px 15px;
     opacity: 1;
 
@@ -124,11 +124,11 @@ a.qo-btn-secondary {
   &.active {
     border: 2px solid blue;
   }
-  
+
   img {
     height: 100%;
     width: 100%;
-    object-fit: cover;  
+    object-fit: cover;
   }
 }
 
@@ -137,21 +137,21 @@ a.qo-btn-secondary {
   transition: opacity ease 1s;
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  max-width: 20vw;
-  max-height: 20vh;
+  width: 44%;
+  height: 44%;
   background: white;
   display: flex;
   flex-direction: column;
-  margin: 10px;
+  margin: 0 10px;
 
   &.active {
     border: 2px solid blue;
   }
-  
+
   img {
     height: 100%;
     width: 100%;
-    object-fit: cover;  
+    object-fit: cover;
   }
 }
 
@@ -222,7 +222,7 @@ a.qo-btn-secondary {
 
 #myTab2 {
    display: flex;
-  justify-content: space-between; 
+  justify-content: space-between;
   border: none;
 }
 
@@ -256,6 +256,12 @@ a.qo-btn-secondary {
   margin-bottom: 5px;
 }
 
+.outfit-grid{
+  display: flex;
+  flex-wrap: wrap;
+  height: 400px;
+  justify-content: end;
+}
 .saved-outfit-collapse {
   // max-height: 40vh;
   // max-width: 90vw;

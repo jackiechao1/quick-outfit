@@ -1,4 +1,19 @@
 <% @outfits.each do |outfit| %>
-  <%= link_to 'select outfit of the day', "/outfits/#{outfit.id}/planned_outfits?date=#{date}", method: :post, class: 'btn btn-primary btn-lg qo-btn-primary' %>
-  <%= render 'outfits/outfit_carousel', outfit: outfit %>
+  <div class="calendar-outfit-card">
+    <div class="calendar-outfit-header">
+      <%= link_to '', "/outfits/#{outfit.id}/planned_outfits?date=#{date}", method: :post, class: 'fas fa-plus-circle' %>
+      <span><%= outfit.name %></span>
+    </div>
+
+      <div class="rating-star">
+        <% outfit.rating.times do |i| %>
+          <span class="icon">★</span>
+        <% end %>
+      </div>
+        <p class="review-small">
+          <%= outfit.review %>
+        </p>
+
+    <%= render 'outfits/outfit_carousel', outfit: outfit %>
+  </div>
 <% end %>

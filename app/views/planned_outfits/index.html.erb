@@ -12,9 +12,9 @@
     <% if planned_outfit %>
       <%= link_to date.day, planned_outfit_path(planned_outfit), method: :delete, class: 'btn btn-primary btn-lg qo-btn-primary btn-calendar' %>
     <% else %>
-      <span type="button" data-toggle="modal" data-target="#dayModal-<%= date %>">
+      <div class="qo-calendar-day" data-toggle="modal" data-target="#dayModal-<%= date %>">
         <%= date.day %>
-      </span>
+      </div>
     <% end %>
 
 
@@ -37,7 +37,10 @@
             <%= render 'po_form', date: date %>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-primary btn-lg qo-btn-primary">Save</button>
+
+
+
+            <button type="button" class="btn btn-primary btn-lg qo-btn-primary"><%=link_to 'Wardrobe', '/items' %></button>
             <button type="button" class="btn btn-lg qo-btn-secondary" data-dismiss="modal">Close</button>
           </div>
         </div>
