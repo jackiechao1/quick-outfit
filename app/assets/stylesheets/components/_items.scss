@@ -39,9 +39,13 @@
 
 .outfit-saved.small {
   margin: 0px;
+<<<<<<< HEAD
+
+=======
   // max-width: 80vw;
   max-height: 20vh;
-  
+
+>>>>>>> 97393c3da4be68e9bdd3e4dd22b7caf97d57e781
   .container {
     margin: 0px;
     width: 100%;
@@ -51,6 +55,18 @@
   }
 }
 
+<<<<<<< HEAD
+.clothes-card-saved {
+  margin: 10px;
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+
 .saved-outfit-card {
   background: #F8F8F8;
   max-width: 80vw !important;
@@ -58,6 +74,36 @@
   margin-left: auto;
   margin-right: auto;
   margin-top: 5px;
+
+
+// styling the fom for new outfit
+
+.select2-container {
+
+}
+
+.select2.select2-container {
+  width: 100% !important;
+}
+
+.item_color label {
+  display: block;
+}
+
+.dropdown-color {
+  display: flex;
+  align-items: center;
+
+  span {
+    padding-left: 12px;
+  }
+}
+
+
+.select2-dropdown {
+  width: 340px !important;
+}
+=======
   padding: 10px;
 
 }
@@ -68,8 +114,9 @@
 
 .arrow-collapse {
   text-decoration: none;
-  
+
   &:hover {
     text-decoration: none;
   }
 }
+>>>>>>> 97393c3da4be68e9bdd3e4dd22b7caf97d57e781

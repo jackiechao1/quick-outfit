@@ -3,10 +3,12 @@
   <%= f.input :photo %>
   <%= f.input :photo_cache, as: :hidden %>
   <%= f.input :category, collection: ['top', 'bottom', 'shoes'] %>
-  <%= f.input :color, collection: ['white', 'black', 'grey', 'red', 'brown', 'blue', 'green', 'pink', 'yellow'] %>
+  <%= f.input :color, collection: ['white', 'black', 'grey', 'red', 'brown', 'blue', 'green', 'pink', 'yellow'], class: 'select-colors-input' %>
   <%= f.input :style, collection: ['work', 'casual', 'sportswear'] %>
   <%= f.submit class: "btn btn-lg qo-btn-primary" %>
 <% end %>
 
 
 <button button class="btn btn-lg qo-btn-secondary" data-dismiss="modal" aria-label="Close">Back</button>
+
+<%= javascript_pack_tag 'select2' %>
