@@ -52,6 +52,9 @@ item_17 = Item.create!(category: "top", color: "white", style: "casual", photo: 
 
 item_18 = Item.create!(category: "top", color: "white", style: "work", photo: File.open("db/seed_images/white-shirt-work-shirt.jpg"), user: marc)
 
+item_19 = Item.create!(category: "top", color: "brown", style: "casual", photo: File.open("db/seed_images/leopard-vest-bottom.jpeg"), user: marc)
+
+
 puts "creating-outfits"
 outfit_1 = Outfit.create!(name: "interview", user: marc, status: "validated", rating: 4, review: "great to wear for special occasion, or job interviews")
 
