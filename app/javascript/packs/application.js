@@ -55,3 +55,32 @@ if(newlyValidatedOutfits) {
     swal(approved);
   })
 }
+
+$(document).ready(function(){
+  $(".saved-outfit-card-row").click(function(){
+
+    var arrow = this.querySelector(".arrow-collapse");
+    var tab = document.querySelector(arrow.getAttribute("href"));
+    var open = tab.style.display === "block";
+
+    console.log(this)
+    console.log(this.querySelector(".arrow-collapse"))
+    console.log(arrow.getAttribute("href"))
+
+    if (open) {
+      $(arrow.getAttribute("href")).slideUp(400, () => {
+        // console.log("animation complete callback slideup");
+        arrow.children[0].classList.remove("rotate")
+
+      })      
+    } else {
+      $(arrow.getAttribute("href")).slideDown(400, () => {
+        // console.log("animation complete callback slidedown");
+        arrow.children[0].classList.add("rotate")
+
+      })      
+    }
+  });
+});
+
+
