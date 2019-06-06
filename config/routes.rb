@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get "/csscomponents", to: 'pages#csscomponents'
   get "/menu", to: 'pages#menu'
   get "/validation", to: 'pages#validation'
+  get "/random", to: 'pages#random'
   devise_for :users
   root to: 'pages#home'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

@@ -23,8 +23,8 @@ ActiveRecord::Schema.define(version: 2019_06_05_135158) do
     t.datetime "updated_at", null: false
     t.string "photo"
     t.string "style"
-    t.integer "counter", default: 0, null: false
     t.string "seed_image"
+    t.integer "counter", default: 0, null: false
     t.index ["user_id"], name: "index_items_on_user_id"
   end
 

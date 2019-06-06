@@ -37,7 +37,7 @@
 
     <!-- Modal -->
     <div class="modal fade" id="add-item-form" tabindex="-1" role="dialog" aria-labelledby="add-item-modal" aria-hidden="true">
-      <div class="modal-dialog" role="document">
+      <div class="modal-dialog modal-dialog-add-item" role="document">
         <div class="modal-content">
           <div class="modal-header">
             <h3 class="modal-title" id="add-item-modal">Add an item</h3>
@@ -57,6 +57,9 @@
 
 <% elsif params[:action] == "show" || params[:controller] == "outfits" || params[:action] == "validation" || params[:controller] == "planned_outfits" %>
   <div class="d-flex navbar navbar-expand-sm navbar-light navbar-items">
-    <%= render 'layouts/back' %>
+    <%= link_to menu_path, class: 'logo' do %>
+      <i class="fas fa-chevron-left"></i>
+    <% end %>
+    <%= image_tag "Vector.png", id: 'logo' %>
   </div>
 <% end %>

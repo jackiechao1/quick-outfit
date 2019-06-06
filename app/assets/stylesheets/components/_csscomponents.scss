@@ -1,6 +1,6 @@
 h1, h2, h3, p{
   color: $typo-color;
-  margin-left: 10px;
+  // margin-left: 10px;
   margin-bottom: 10px;
   margin-top: 10px;
   margin-right: 10px;
@@ -81,8 +81,8 @@ a.qo-btn-secondary {
 
 .logo {
   i {
-    font-size: 40px;
-    color: $blue;
+    font-size: 30px;
+    color: black;
     padding: 4px 15px;
     opacity: 1;
 
@@ -110,8 +110,6 @@ a.qo-btn-secondary {
 }
 
 
-
-
 .clothes-card-saved {
   opacity: 0.9;
   transition: opacity ease 1s;
@@ -125,6 +123,35 @@ a.qo-btn-secondary {
   margin: 10px;
   &.active {
     border: 2px solid blue;
+  }
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.clothes-card-saved-small {
+  opacity: 0.9;
+  transition: opacity ease 1s;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  width: 44%;
+  height: 44%;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  margin: 0 10px;
+
+  &.active {
+    border: 2px solid blue;
+  }
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
   }
 }
 
@@ -179,5 +206,71 @@ a.qo-btn-secondary {
   padding: 24px;
 }
 
+.rotate {
+  transform: rotate(90deg);
+  transform-origin: center !important;
+}
 
-          //<%= select_tag :rating_outfit, options_for_select((1..10).to_a) %>
+.rating-star {
+  margin-top: 8px;
+}
+
+.outfit-tabs {
+  display: flex;
+  justify-content: space-between;
+}
+
+#myTab2 {
+   display: flex;
+  justify-content: space-between;
+  border: none;
+}
+
+.nav-item {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 30vw;
+  min-width: 30vw;
+  text-align: center;
+
+  &.nav-item-category {
+    border: none;
+    a {
+      border: none;
+    }
+
+    .nav-link.active {
+      color: blue;
+    }
+  }
+}
+
+.saved-outfit-card-row {
+  display: flex;
+  justify-content: space-between;
+  max-width: 90vw;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  background-color: whitesmoke;
+  margin-bottom: 5px;
+}
+
+.outfit-grid{
+  display: flex;
+  flex-wrap: wrap;
+  height: 400px;
+  justify-content: end;
+}
+.saved-outfit-collapse {
+  // max-height: 40vh;
+  // max-width: 90vw;
+  // padding: 10px;
+}
+.small-carrousel {
+  // img {
+  //   max-height: 15vh !important;
+  //   max-width: 15vh !important;
+  // }
+  // transform: scaley(0.5)
+}
