@@ -1,7 +1,6 @@
 class PlannedOutfitsController < ApplicationController
   def index
-    # @outfits = current_user.outfits.where(status: "validated").where("rating >= 6")
-    @outfits = current_user.outfits.where(status: "validated")
+    @outfits = current_user.outfits.where(status: "validated").where("rating >= 6")
     @planned_outfits = current_user.planned_outfits
   end
 
