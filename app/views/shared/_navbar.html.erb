@@ -1,6 +1,22 @@
 <% if params[:action] == "home" || params[:action] == "menu" %>
-  <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-    <img src="" />
+
+   <ul class="navbar-nav-home">
+        <% if user_signed_in? %>
+          <li>
+            <%= link_to destroy_user_session_path, method: :delete, class: "" do %>
+              <i class="fas fa-sign-out-alt"></i>
+            <% end %>
+          </li>
+        <% else %>
+          <li class="nav-item active">
+            <%= link_to "login", new_user_session_path, class: "dropdown-item" %>
+          </li>
+          <li class="nav-item active">
+            <%= link_to "sign-up", new_user_registration_path, class: "dropdown-item" %>
+          </li>
+        <% end %>
+      </ul>
+  <!-- <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span>
     </button>
 
@@ -8,7 +24,7 @@
       <ul class="navbar-nav mr-auto">
         <% if user_signed_in? %>
           <li>
-            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "" %>
           </li>
         <% else %>
           <li class="nav-item active">
@@ -20,7 +36,7 @@
         <% end %>
       </ul>
     </div>
-  </div>
+  </div> -->
 <% elsif params[:controller] == "items" %>
 
   <div class="d-flex navbar navbar-expand-sm navbar-light navbar-items">
@@ -60,6 +76,6 @@
     <%= link_to menu_path, class: 'logo' do %>
       <i class="fas fa-chevron-left"></i>
     <% end %>
-    <%= image_tag "Vector2.png", id: 'logo' %>
+    <%= image_tag "Vector.png", id: 'logo' %>
   </div>
 <% end %>

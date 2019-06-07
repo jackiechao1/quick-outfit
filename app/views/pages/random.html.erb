@@ -1,26 +1,22 @@
 
-<br>
-<br>
-<br>
-<br>
-<br>
 <div class= "random-center">
-	<div class="outfit-grid">
-		<div class="clothes-card-saved-small">
+	<div class="outfit-grid justify-content-center">
+		<div class="clothes-card-saved-small-custom">
 	    	<%= cl_image_tag(@tops[0].photo, secure: true) %>
 	  	</div>
-	  	<div class="clothes-card-saved-small">
+	  	<div class="clothes-card-saved-small-custom">
 		    <%= cl_image_tag(@tops[1].photo, secure: true) %>
 	  	</div>
-	  	<div class="clothes-card-saved-small">
+	  	<div class="clothes-card-saved-small-custom">
 		    <%= cl_image_tag(@bottom.photo, secure: true) %>
 	  	</div>
-	  	<div class="clothes-card-saved-small">
+	  	<div class="clothes-card-saved-small-custom">
 		    <%= cl_image_tag(@shoe.photo, secure: true) %>
 	  	</div>
 	</div>
 	<div class="random-align-buttons">
-		<%=link_to 'Refresh', '/random', class: 'btn btn-primary btn-lg qo-btn-primary'%>
-		<%=link_to 'Select', '/', class: 'btn btn-primary btn-lg qo-btn-primary'%>
+		<%=link_to 'Refresh', '/random', class: 'btn btn-custom'%>
+		<%=link_to 'Select', '/menu' , class: 'btn btn-custom'%>
+
 	</div>
 </div>
