@@ -30,19 +30,19 @@
     <% end %>
   </div>
 <% else %>
-  <div class="slick-carousel">
+  <div style="
+    text-align: center;
+" >
+    <h3><%= outfit.name %></h3>
+            <div class="outfit-grid justify-content-center">
+
     <% outfit.items.each do |t| %>
-      <div>
-        <div class="clothes-card-saved">
-          <div class="clothes-card-photo-saved">
-            <%= cl_image_tag(t.photo, secure: true) %>
-          </div>
-          <div class="clothes-card-footer-saved">
-            <p> <%= t.style %></p>
-          </div>
-        </div>
-      </div>
+      <div class="clothes-card-saved-d">
+              <%= cl_image_tag(t.photo, secure: true) %>
+              <p> <%= t.style %></p>
+            </div>
     <% end %>
+  </div>
   </div>
 <% end %>
 
