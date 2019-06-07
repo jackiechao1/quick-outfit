@@ -77,18 +77,18 @@ document.querySelector(".save-btn").addEventListener("click", (event) => {
   if (uniq.length > 3) {
     event.stopPropagation();
     option.text = "too many colors"
-    swal(option).then(() => location.reload());
+    swal(option)
   } else if ((uniq.includes("pink") && uniq.includes('yellow'))) {
     event.stopPropagation();
     option.text = "Pink doesn't go with yellow."
-    swal(option).then(() => location.reload());
+    swal(option)
   } else if (uniq.includes("yellow") && uniq.includes("red")) {
     event.stopPropagation();
     option.text = "Yellow doesn't go with red."
-    swal(option).then(() => location.reload());
+    swal(option)
   } else if (uniq.includes("brown") && uniq.includes("pink")) {
     event.stopPropagation();
     option.text = "Brown doesn't go with pink."
-    swal(option).then(() => location.reload());
+    swal(option)
   }
 });
