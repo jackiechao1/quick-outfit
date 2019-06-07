@@ -22,9 +22,9 @@ item_1 = Item.create!(counter: 9, category: "top", color: "black", style: "work"
 
 item_19 = Item.create!(counter: 1, category: "top", color: "brown", style: "casual", photo: File.open("db/seed_images/leopard-vest-bottom.jpeg"), user: marc)
 
-item_9 = Item.create!(counter: 14, category: "top", color: "white", style: "casual", photo: File.open("db/seed_images/shirt-top-shirt-white.jpg"), user: marc)
-
 item_7 = Item.create!(counter: 11, category: "top", color: "yellow", style: "casual", photo: File.open("db/seed_images/raincoat-top-casual-yellow.jpeg"), user: marc)
+
+item_9 = Item.create!(counter: 14, category: "top", color: "white", style: "casual", photo: File.open("db/seed_images/shirt-top-shirt-white.jpg"), user: marc)
 
 item_3 = Item.create!(counter: 20, category: "top", color: "brown", style: "casual", photo: File.open("db/seed_images/jackety-top-casual-brown.jpg"), user: marc)
 

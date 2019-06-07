@@ -76,7 +76,7 @@ const option = {
 document.querySelector(".save-btn").addEventListener("click", (event) => {
   if (uniq.length > 3) {
     event.stopPropagation();
-    option.text = "too many colors"
+    option.text = "Fashion Alert: No more than 3 colors"
     swal(option)
   } else if ((uniq.includes("pink") && uniq.includes('yellow'))) {
     event.stopPropagation();
