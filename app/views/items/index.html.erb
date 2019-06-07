@@ -1,6 +1,6 @@
 <h1>Wardrobe</h1>
 <%= form_tag outfits_path, method: :post do %>
-  
+
   <%= render 'items/carousel', items: @tops %>
 
   <%= render 'items/carousel', items: @bottoms %>
@@ -8,7 +8,7 @@
   <%= render 'items/carousel', items: @shoes %>
 
   <div class= "items-save-button">
-    <div class='btn btn-primary btn-lg qo-btn-primary save-btn' data-target="#add-outfit" data-toggle='modal'>save</div>
+    <div class='btn-custom btn-margin' data-target="#add-outfit" data-toggle='modal'>save</div>
   </div>
   <div class="modal fade" id="add-outfit" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-dialog-add-item" role="document">
@@ -20,8 +20,8 @@
           </button>
         </div>
         <div class="modal-body">
-          <%= text_field_tag :outfit_name, nil, class: "border"  %>
-          <%= button_tag :save, class: 'btn btn-primary btn-lg qo-btn-primary'%>
+          <%= text_field_tag :outfit_name, nil, class: "border custom-input"  %>
+          <%= button_tag :save, class: 'btn btn-custom btn-margin-top'%>
         </div>
       </div>
     </div>

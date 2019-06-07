@@ -7,8 +7,8 @@
       </a>
   </div>
     <div class="collapse saved-outfit-collapse" id="collapse-<%= outfit.id %>">
-      <div class="card card-body" style="padding-top: 0px;">
-        <div class= "saved-outfit-card" style="">
+      <div class="card" style="padding-top: 0px;">
+        <div class= "saved-outfit-card">
           <div class= "outfit-saved small">
             <div class="container" style="padding: 0 !important;">
               <div class="rating-star">
@@ -19,13 +19,15 @@
                 <p class="review-small">
                   <%= outfit.review %>
                 </p>
-                <%= link_to ' Plan the outfit on the calendar', "/outfits/#{outfit.id}/planned_outfits?date=#{Date.today}", method: :post, class: 'fas fa-plus-circle' %>
+                <%= link_to "/outfits/#{outfit.id}/planned_outfits?date=#{Date.today}", method: :post do %>
+                   <p class="outfit-plan-action"> <i class="fas fa-plus-circle"></i> Plan the outfit on the calendar</p>
+                <% end %>
 
             </div>
           </div>
         </div>
       </div>
-      <div class="outfit-grid">
+      <div class="outfit-grid justify-content-center">
         <% outfit.items.each do |t| %>
 
             <div class="clothes-card-saved-small">

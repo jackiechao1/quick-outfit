@@ -1,8 +1,9 @@
 <% @outfits.each do |outfit| %>
   <div class="calendar-outfit-card">
     <div class="calendar-outfit-header">
-      <%= link_to '', "/outfits/#{outfit.id}/planned_outfits?date=#{date}", method: :post, class: 'fas fa-plus-circle' %>
       <span><%= outfit.name %></span>
+      <%= link_to '', "/outfits/#{outfit.id}/planned_outfits?date=#{date}", method: :post, class: 'fas fa-plus-circle' %>
+
     </div>
 
       <div class="rating-star">
@@ -14,6 +15,25 @@
           <%= outfit.review %>
         </p>
 
-    <%= render 'outfits/outfit_carousel', outfit: outfit %>
+    <%# render 'outfits/outfit_carousel', outfit: outfit %>
+    <% if defined?(small) %>
+    <div class="small-carrousel">
+          <% outfit.items.each do |t| %>
+              <div class="clothes-card-saved">
+                  <%= cl_image_tag(t.photo, secure: true) %>
+              </div>
+          <% end %>
+        </div>
+      <% else %>
+        <div class="outfit-grid justify-content-center">
+          <% outfit.items.each do |t| %>
+            <div class="clothes-card-saved-d">
+              <%= cl_image_tag(t.photo, secure: true) %>
+              <p> <%= t.style %></p>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+
   </div>
 <% end %>

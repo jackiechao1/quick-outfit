@@ -5,10 +5,10 @@
   <%= f.input :category, collection: ['top', 'bottom', 'shoes'] %>
   <%= f.input :color, collection: ['white', 'black', 'grey', 'red', 'brown', 'blue', 'green', 'pink', 'yellow'], class: 'select-colors-input' %>
   <%= f.input :style, collection: ['work', 'casual', 'sportswear'] %>
-  <%= f.submit class: "btn btn-lg qo-btn-primary" %>
+  <%= f.submit class: "btn btn-custom" %>
 <% end %>
 
 
-<button button class="btn btn-lg qo-btn-secondary" data-dismiss="modal" aria-label="Close">Back</button>
+<button button class="btn qo-btn-secondary-custom" data-dismiss="modal" aria-label="Close">Back</button>
 
 <%= javascript_pack_tag 'select2' %>

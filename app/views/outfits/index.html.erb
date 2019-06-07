@@ -26,21 +26,21 @@
       </li>
     </ul>
     <div class="tab-content" id="myTabContent2">
-      <div class="tab-pane fade show active" id="work-clothes" role="tabpanel" aria-labelledby="work-clothes-tab">
+      <div class="tab-pane fade show active" id="work-clothes" role="tabpanel" aria-labelledby="work-clothes-tab" style="margin-top: 30px;">
         <% @outfits.each do |outfit| %>
           <% if outfit.status == 'validated' && outfit.rating >= 3 && outfit.items.first.style == "work"%>
             <%= render 'outfits/saved_outfit_cards', outfit: outfit, small: true %>
           <% end %>
         <% end %>
       </div>
-      <div class="tab-pane fade" id="casual-clothes" role="tabpanel" aria-labelledby="casual-clothes">
+      <div class="tab-pane fade" id="casual-clothes" role="tabpanel" aria-labelledby="casual-clothes" style="margin-top: 30px;">
         <% @outfits.each do |outfit| %>
           <% if outfit.status == 'validated' && outfit.rating >= 3 && outfit.items.first.style == "casual" %>
             <%= render 'outfits/saved_outfit_cards', outfit: outfit, small: true %>
           <% end %>
         <% end %>
       </div>
-      <div class="tab-pane fade" id="sport-clothes" role="tabpanel" aria-labelledby="sport-tab">
+      <div class="tab-pane fade" id="sport-clothes" role="tabpanel" aria-labelledby="sport-tab" style="margin-top: 30px;">
         <% @outfits.each do |outfit| %>
           <% if outfit.status == 'validated' && outfit.rating >= 3 && outfit.items.first.style == "sportswear" %>
             <%= render 'outfits/saved_outfit_cards', outfit: outfit, small: true %>
@@ -49,14 +49,14 @@
       </div>
     </div>
   </div>
-  <div class="tab-pane fade" id="rejected" role="tabpanel" aria-labelledby="rejected-tab">
+  <div class="tab-pane fade" id="rejected" role="tabpanel" aria-labelledby="rejected-tab" style="margin-top: 30px;">
     <% @outfits.each do |outfit| %>
       <% if outfit.status == 'validated' && outfit.rating < 3 %>
         <%= render 'outfits/saved_outfit_cards', outfit: outfit, small: true %>
       <% end %>
     <% end %>
   </div>
-  <div class="tab-pane fade" id="pending" role="tabpanel" aria-labelledby="pending-tab">
+  <div class="tab-pane fade" id="pending" role="tabpanel" aria-labelledby="pending-tab" style="margin-top: 30px;">
     <% @outfits.each do |outfit| %>
       <% if outfit.status == 'pending' %>
         <%= render 'outfits/outfit_carousel', outfit: outfit %>

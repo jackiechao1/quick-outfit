@@ -19,7 +19,7 @@ h1{
     width: 60px;
     position: absolute;
     top: 61%;
-    right: 9%;
+    right: 5%;
   }
 }
 
@@ -41,14 +41,14 @@ h1{
 
 #lab_social_icon_footer {
   padding: 0.5rem 1rem;
-  background-color: #c9d2dd;
+  //background-color: #c9d2dd;
   position: absolute;
   width: 100%;
   bottom: 0px;
 }
 
 #lab_social_icon_footer a {
-  color: #333;
+  color: $funcolor ;
 }
 
 #lab_social_icon_footer .social:hover {

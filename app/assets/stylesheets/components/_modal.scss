@@ -1,15 +1,26 @@
 .modal-dialog-add-item {
   display: flex;
   flex-direction: column;
-  width: 100vw;
-  height: calc(90vh - 16px);
+  //width: 100vw;
+  height: 100%;
   align-items: center;
   justify-content: center;
-  padding: 40px;
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  // padding: 40px;
+  // margin-left: 10px;
+  // margin-right: 10px;
+  // margin-top: 10px;
+  // margin-bottom: 10px;
   border-radius: 15px;
 }
 
+.modal-title{
+  font-weight:bolder;
+}
+
+.modal-footer{
+  justify-content: center;
+}
+
+.no-border{
+  border-top: none !important;
+}

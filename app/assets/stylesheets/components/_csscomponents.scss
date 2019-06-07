@@ -6,6 +6,10 @@ h1, h2, h3, h4, p{
   margin-right: 10px;
 }
 
+a {
+  font-family: $body-font;
+}
+
 .slick-current .clothes-card {
   opacity: 1;
 }
@@ -67,7 +71,7 @@ h1, h2, h3, h4, p{
 
 
 a.qo-btn-input {
-  color: $blue;
+  color: $funcolor;
 }
 
 .qo-btn-secondary {
@@ -140,12 +144,12 @@ a.qo-btn-secondary {
   transition: opacity ease 1s;
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  width: 44%;
-  height: 44%;
+  width: 120px;
+  height: 150px;
   background: white;
   display: flex;
   flex-direction: column;
-  margin: 0 10px;
+  margin: 10px;
 
   &.active {
     border: 2px solid blue;
@@ -215,7 +219,8 @@ a.qo-btn-secondary {
 }
 
 .rating-star {
-  margin-top: 8px;
+  color: #fdcb6e;
+  font-size: 25px;
 }
 
 .outfit-tabs {
@@ -251,7 +256,7 @@ a.qo-btn-secondary {
 .saved-outfit-card-row {
   display: flex;
   justify-content: space-between;
-  max-width: 90vw;
+  //max-width: 90vw;
   margin-left: auto;
   margin-right: auto;
   padding: 10px;
@@ -262,8 +267,8 @@ a.qo-btn-secondary {
 .outfit-grid{
   display: flex;
   flex-wrap: wrap;
-  height: 400px;
-  justify-content: end;
+  //justify-content: flex-start;
+  width: 100%;
 }
 .saved-outfit-collapse {
   // max-height: 40vh;
@@ -288,5 +293,90 @@ a.qo-btn-secondary {
 }
 
 .fas.fa-chevron-left, .fas.fa-plus-circle{
-  color: $blue;
+  color: $funcolor;
+}
+
+.btn-custom{
+  background-color: $funcolor;
+  width: 100%;
+ // height: 100%;
+  padding: 10px;
+  color: white;
+  align-items: center;
+  text-align: center;
+  font-size: 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  &:hover{
+    text-decoration: none;
+    color: white;
+  }
+  a:hover{
+    text-decoration: none;
+    color: white;
+  }
+}
+
+.btn-shadow{
+ box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.btn-margin{
+  margin: 5px;
+  padding: 15px;
+}
+
+.btn-margin-top{
+  margin-top: 10px;
+}
+
+.qo-btn-secondary-custom {
+
+  background-color: #C9D2DD;
+  border-radius: 5px;
+  padding: 4px 15px;
+  margin-top: 5px;
+  width: 100%;
+  color: gray;
+
+}
+
+.custom-input{
+  width: 100%;
+  padding: 10px;
+}
+
+
+.clothes-card-saved-small-custom {
+  opacity: 0.9;
+  transition: opacity ease 1s;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  width: 160px;
+  height: 200px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+
+  &.active {
+    border: 2px $funcolor;
+  }
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.random-center{
+  margin-top: 80px;
+}
+
+
+.fa-caret-right {
+  color: $black;
 }
