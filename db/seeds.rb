@@ -58,27 +58,27 @@ item_13 = Item.create!(counter: 9, category: "shoes", color: "yellow", style: "s
 
 
 puts "creating-outfits"
-outfit_3 = Outfit.create!(name: "sport", user: marc, status: "validated", rating: 3, review: "hope you will score some goals today 😉")
+outfit_3 = Outfit.create!(name: "sport", user: marc, status: "validated", rating: 3, review: "Let score some goals ! 😉")
 
 OutfitItem.create!(outfit: outfit_3, item: item_13)
 OutfitItem.create!(outfit: outfit_3, item: item_14)
 OutfitItem.create!(outfit: outfit_3, item: item_16)
 
-outfit_1 = Outfit.create!(name: "interview", user: marc, status: "validated", rating: 4, review: "great to wear for special occasion, or job interviews")
+outfit_1 = Outfit.create!(name: "interview", user: marc, status: "validated", rating: 4, review: "great for a job interviews")
 
 OutfitItem.create!(outfit: outfit_1, item: item_1)
 OutfitItem.create!(outfit: outfit_1, item: item_6)
 OutfitItem.create!(outfit: outfit_1, item: item_11)
 OutfitItem.create!(outfit: outfit_1, item: item_18)
 
-outfit_4 = Outfit.create!(name: "interview v2", user: marc, status: "validated", rating: 3, review: "it's fine but generally it's better to have the same color in pants and vest")
+outfit_4 = Outfit.create!(name: "interview v2", user: marc, status: "validated", rating: 3, review: "it's fine but generally it's better to have the same color in pants and vest 🤔 ")
 
 OutfitItem.create!(outfit: outfit_4, item: item_2)
 OutfitItem.create!(outfit: outfit_4, item: item_6)
 OutfitItem.create!(outfit: outfit_4, item: item_11)
 OutfitItem.create!(outfit: outfit_4, item: item_18)
 
-outfit_2 = Outfit.create!(name: "casual day", user: marc, status: "validated", rating: 5, review: "perfect for a coding day")
+outfit_2 = Outfit.create!(name: "casual day", user: marc, status: "validated", rating: 5, review: "perfect for a casual day 👌")
 
 OutfitItem.create!(outfit: outfit_2, item: item_3)
 OutfitItem.create!(outfit: outfit_2, item: item_4)
