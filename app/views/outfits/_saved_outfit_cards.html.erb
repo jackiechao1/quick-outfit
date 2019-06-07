@@ -19,7 +19,7 @@
                 <p class="review-small">
                   <%= outfit.review %>
                 </p>
-                <%= link_to 'Add outfit', "/outfits/#{outfit.id}/planned_outfits?date=#{Date.today}", method: :post, class: 'fas fa-plus-circle' %>
+                <%= link_to ' Plan the outfit on the calendar', "/outfits/#{outfit.id}/planned_outfits?date=#{Date.today}", method: :post, class: 'fas fa-plus-circle' %>
 
             </div>
           </div>
